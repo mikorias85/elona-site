@@ -1,0 +1,629 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Mac\\Home\\Desktop\\teste\\application\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\dbmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\dbmodule.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formlogs.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formlogs.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formstatistiques.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formstatistiques.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formmain.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formagents.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formagents.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formagents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formagents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\agentservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\agentservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\centreappel.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:centreappel.vbproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formexport.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formexport.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formstatistiques.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formstatistiques.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\securityservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\securityservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\session.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\session.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\roles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\roles.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\actions.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\actions.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formmain.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formmain.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\utils.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\utils.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\program.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\program.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\logger.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\logger.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\constantes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\constantes.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\modules\\appelservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:modules\\appelservice.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formfiltrage.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formfiltrage.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formfiltrage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formfiltrage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formexport.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formexport.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formappelliste.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formappelliste.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formappelliste.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formappelliste.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formappel.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formappel.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formappel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formappel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formfiltrage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formfiltrage.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formlogin.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formstatistiques.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formstatistiques.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formlogs.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formlogs.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formlogs.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formlogs.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formappelliste.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formappelliste.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formappel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formappel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formexport.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formexport.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formagents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formagents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|c:\\mac\\home\\desktop\\teste\\application\\forms\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{4D695757-4031-4F11-D905-B8ED80C7279A}|CentreAppel.vbproj|solutionrelative:forms\\formlogin.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormAgents.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAgents.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAgents.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAgents.Designer.vb",
+              "RelativeToolTip": "Forms\\FormAgents.Designer.vb",
+              "ViewState": "AgIAABQAAACgZWZmZuYhwCcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:30:39.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AgentService.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\AgentService.vb",
+              "RelativeDocumentMoniker": "Modules\\AgentService.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\AgentService.vb",
+              "RelativeToolTip": "Modules\\AgentService.vb",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAwwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:39:41.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormStatistiques.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormStatistiques.vb",
+              "RelativeDocumentMoniker": "Forms\\FormStatistiques.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormStatistiques.vb",
+              "RelativeToolTip": "Forms\\FormStatistiques.vb",
+              "ViewState": "AgIAAAUAAABAAAAAAMAtwBcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T10:27:24.677Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormLogin.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogin.vb",
+              "RelativeDocumentMoniker": "Forms\\FormLogin.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogin.vb",
+              "RelativeToolTip": "Forms\\FormLogin.vb",
+              "ViewState": "AgIAABsAAACAAgAAAIAWwCkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:08:51.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormLogs.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogs.vb",
+              "RelativeDocumentMoniker": "Forms\\FormLogs.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogs.vb",
+              "RelativeToolTip": "Forms\\FormLogs.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T10:07:56.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DBModule.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\DBModule.vb",
+              "RelativeDocumentMoniker": "Modules\\DBModule.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\DBModule.vb",
+              "RelativeToolTip": "Modules\\DBModule.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:17:04.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormMain.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormMain.vb",
+              "RelativeDocumentMoniker": "Forms\\FormMain.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormMain.vb",
+              "RelativeToolTip": "Forms\\FormMain.vb",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwGAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T18:18:46.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormAgents.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAgents.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAgents.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAgents.vb",
+              "RelativeToolTip": "Forms\\FormAgents.vb",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAkwLcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:30:24.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CentreAppel.vbproj",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\CentreAppel.vbproj",
+              "RelativeDocumentMoniker": "CentreAppel.vbproj",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\CentreAppel.vbproj",
+              "RelativeToolTip": "CentreAppel.vbproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-07-12T14:25:36.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormExport.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormExport.vb",
+              "RelativeDocumentMoniker": "Forms\\FormExport.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormExport.vb",
+              "RelativeToolTip": "Forms\\FormExport.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:15:36.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormStatistiques.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormStatistiques.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormStatistiques.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormStatistiques.Designer.vb",
+              "RelativeToolTip": "Forms\\FormStatistiques.Designer.vb",
+              "ViewState": "AgIAAAIAAAAAAAAAAABwPRIAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T10:27:49.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Logger.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Logger.vb",
+              "RelativeDocumentMoniker": "Modules\\Logger.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Logger.vb",
+              "RelativeToolTip": "Modules\\Logger.vb",
+              "ViewState": "AgIAAA4AAAAgZmZmZqYqwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:39:13.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Program.vb",
+              "RelativeDocumentMoniker": "Modules\\Program.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Program.vb",
+              "RelativeToolTip": "Modules\\Program.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:17:33.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Roles.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Roles.vb",
+              "RelativeDocumentMoniker": "Modules\\Roles.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Roles.vb",
+              "RelativeToolTip": "Modules\\Roles.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:29:54.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SecurityService.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\SecurityService.vb",
+              "RelativeDocumentMoniker": "Modules\\SecurityService.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\SecurityService.vb",
+              "RelativeToolTip": "Modules\\SecurityService.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:33:08.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FormMain.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormMain.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormMain.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormMain.Designer.vb",
+              "RelativeToolTip": "Forms\\FormMain.Designer.vb",
+              "ViewState": "AgIAADYAAAAAAAAAAAAUwGIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T15:25:23.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Actions.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Actions.vb",
+              "RelativeDocumentMoniker": "Modules\\Actions.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Actions.vb",
+              "RelativeToolTip": "Modules\\Actions.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:30:23.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Utils.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Utils.vb",
+              "RelativeDocumentMoniker": "Modules\\Utils.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Utils.vb",
+              "RelativeToolTip": "Modules\\Utils.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:17:15.516Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Session.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Session.vb",
+              "RelativeDocumentMoniker": "Modules\\Session.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Session.vb",
+              "RelativeToolTip": "Modules\\Session.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:12:54.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Constantes.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Constantes.vb",
+              "RelativeDocumentMoniker": "Modules\\Constantes.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\Constantes.vb",
+              "RelativeToolTip": "Modules\\Constantes.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA+wAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T10:45:30.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AppelService.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\AppelService.vb",
+              "RelativeDocumentMoniker": "Modules\\AppelService.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Modules\\AppelService.vb",
+              "RelativeToolTip": "Modules\\AppelService.vb",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAwwF8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T10:20:54.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "FormFiltrage.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormFiltrage.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormFiltrage.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormFiltrage.Designer.vb",
+              "RelativeToolTip": "Forms\\FormFiltrage.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T11:45:33.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FormFiltrage.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormFiltrage.vb",
+              "RelativeDocumentMoniker": "Forms\\FormFiltrage.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormFiltrage.vb",
+              "RelativeToolTip": "Forms\\FormFiltrage.vb",
+              "ViewState": "AgIAAAQAAAAAzczMzMw/wBgAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T18:20:38.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FormExport.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormExport.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormExport.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormExport.Designer.vb",
+              "RelativeToolTip": "Forms\\FormExport.Designer.vb",
+              "ViewState": "AgIAABsAAAAAAAAAAADwvzAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T09:59:14.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FormAppelListe.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppelListe.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAppelListe.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppelListe.Designer.vb",
+              "RelativeToolTip": "Forms\\FormAppelListe.Designer.vb",
+              "ViewState": "AgIAACYAAACAZ2ZmZuYawDkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:27:13.56Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FormAppelListe.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppelListe.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAppelListe.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppelListe.vb",
+              "RelativeToolTip": "Forms\\FormAppelListe.vb",
+              "ViewState": "AgIAAHMAAAAAAAAAAADwv5AAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:26:12.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FormAppel.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppel.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAppel.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppel.Designer.vb",
+              "RelativeToolTip": "Forms\\FormAppel.Designer.vb",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAiwIkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:13:26.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FormAppel.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppel.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAppel.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppel.vb",
+              "RelativeToolTip": "Forms\\FormAppel.vb",
+              "ViewState": "AgIAAFoAAAAAmZmZmZkpwHMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:13:44.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FormFiltrage.vb [Conception]",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormFiltrage.vb",
+              "RelativeDocumentMoniker": "Forms\\FormFiltrage.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormFiltrage.vb [Conception]",
+              "RelativeToolTip": "Forms\\FormFiltrage.vb [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T18:08:16.635Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FormLogin.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogin.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormLogin.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogin.Designer.vb",
+              "RelativeToolTip": "Forms\\FormLogin.Designer.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T18:19:37.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "FormStatistiques.vb [Conception]",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormStatistiques.vb",
+              "RelativeDocumentMoniker": "Forms\\FormStatistiques.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormStatistiques.vb [Conception]",
+              "RelativeToolTip": "Forms\\FormStatistiques.vb [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T10:27:05.835Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FormLogs.Designer.vb",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogs.Designer.vb",
+              "RelativeDocumentMoniker": "Forms\\FormLogs.Designer.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogs.Designer.vb",
+              "RelativeToolTip": "Forms\\FormLogs.Designer.vb",
+              "ViewState": "AgIAACEAAAAAAAAAAADwvzEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T10:09:10.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "FormLogs.vb [Conception]",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogs.vb",
+              "RelativeDocumentMoniker": "Forms\\FormLogs.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogs.vb [Conception]",
+              "RelativeToolTip": "Forms\\FormLogs.vb [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T10:07:46.035Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "FormAppelListe.vb [Conception]",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppelListe.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAppelListe.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppelListe.vb [Conception]",
+              "RelativeToolTip": "Forms\\FormAppelListe.vb [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-12T08:26:02.108Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "FormAppel.vb [Conception]",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppel.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAppel.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAppel.vb [Conception]",
+              "RelativeToolTip": "Forms\\FormAppel.vb [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T18:07:59.957Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "FormExport.vb [Conception]",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormExport.vb",
+              "RelativeDocumentMoniker": "Forms\\FormExport.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormExport.vb [Conception]",
+              "RelativeToolTip": "Forms\\FormExport.vb [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T18:08:14.451Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "FormAgents.vb [Conception]",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAgents.vb",
+              "RelativeDocumentMoniker": "Forms\\FormAgents.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormAgents.vb [Conception]",
+              "RelativeToolTip": "Forms\\FormAgents.vb [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T18:07:41.885Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "FormLogin.vb [Conception]",
+              "DocumentMoniker": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogin.vb",
+              "RelativeDocumentMoniker": "Forms\\FormLogin.vb",
+              "ToolTip": "C:\\Mac\\Home\\Desktop\\teste\\application\\Forms\\FormLogin.vb [Conception]",
+              "RelativeToolTip": "Forms\\FormLogin.vb [Conception]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-07-11T18:08:05.491Z",
+              "EditorCaption": " [Conception]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

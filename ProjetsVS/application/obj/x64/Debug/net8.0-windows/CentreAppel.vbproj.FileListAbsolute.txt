@@ -1,0 +1,16 @@
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\CentreAppel.vbproj.AssemblyReference.cache
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormAgents.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormAppel.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormAppelsListe.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormExport.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormFiltrage.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormLogin.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormLogs.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormMain.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\ApplicationAppels.FormStatistiques.resources
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\CentreAppel.vbproj.GenerateResource.cache
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\CentreAppel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\CentreAppel.AssemblyInfoInputs.cache
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\CentreAppel.AssemblyInfo.vb
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\CentreAppel.vbproj.CoreCompileInputs.cache
+C:\Mac\Home\Documents\ProjetsVS\application\obj\x64\Debug\net8.0-windows\CentreAppel.sourcelink.json
