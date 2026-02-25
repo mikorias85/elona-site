@@ -6,14 +6,13 @@
     <title>ELONA | Stratégie Digitale</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
-            --bg: #F1EFE7; /* Beige */
+            --bg: #F1EFE7;
             --text: #1a1a1a;
-            --accent: #1612D3; /* Bleu */
+            --accent: #1612D3;
             --white: #ffffff;
             --border: #d1cfc7;
         }
@@ -29,14 +28,12 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* --- TYPOGRAPHIE --- */
         h1, h2, h3, .logo { 
-            font-family: 'Giaza', 'Playfair Display', serif; 
+            font-family: 'Playfair Display', serif; 
             font-weight: 400;
             text-transform: uppercase;
         }
 
-        /* --- NAVIGATION --- */
         nav {
             position: fixed;
             top: 0; width: 100%;
@@ -71,29 +68,13 @@
 
         .nav-links a:hover { color: var(--accent); }
 
-        /* --- LAYOUT --- */
-        section { 
-            padding: 120px 8%; 
-            border-bottom: 1px solid var(--border);
-        }
+        section { padding: 120px 8%; border-bottom: 1px solid var(--border); }
         .container { max-width: 1100px; margin: 0 auto; }
 
-        h1 { 
-            font-size: clamp(45px, 10vw, 90px); 
-            line-height: 0.9; 
-            margin-bottom: 40px;
-            color: var(--accent);
-        }
-
-        h2 { 
-            font-size: clamp(30px, 5vw, 50px); 
-            margin-bottom: 60px; 
-            text-align: center;
-        }
-
+        h1 { font-size: clamp(45px, 10vw, 90px); line-height: 0.9; margin-bottom: 40px; color: var(--accent); }
+        h2 { font-size: clamp(30px, 5vw, 50px); margin-bottom: 60px; text-align: center; }
         p { font-size: 16px; font-weight: 300; letter-spacing: 0.5px; }
 
-        /* --- BOUTONS --- */
         .btn {
             display: inline-block;
             background: var(--accent);
@@ -110,40 +91,49 @@
             cursor: pointer;
         }
 
-        .btn:hover { 
-            background: var(--text);
-            transform: translateY(-5px);
-        }
+        .btn:hover { background: var(--text); transform: translateY(-5px); }
 
-        /* --- GRIDS & CARDS --- */
-        .grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 40px; 
-        }
-
-        .card { 
-            padding: 40px 20px;
-            text-align: center;
-            border: 1px solid var(--border);
-            transition: 0.3s;
-        }
-
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { padding: 40px 20px; text-align: center; border: 1px solid var(--border); transition: 0.3s; }
         .card:hover { border-color: var(--accent); }
-
         .card h3 { font-size: 24px; margin-bottom: 20px; color: var(--accent); }
 
-        .project-img { 
-            width: 100%; 
-            aspect-ratio: 1/1; 
-            object-fit: cover; 
-            margin-bottom: 20px;
-            transition: 0.6s ease;
+        /* --- SLIDER PORTFOLIO --- */
+        .slider-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            cursor: grab;
+            padding-bottom: 30px;
+            -webkit-overflow-scrolling: touch;
         }
-        .project-item { overflow: hidden; }
-        .project-item:hover .project-img { transform: scale(1.05); }
 
-        /* --- TESTIMONIALS (SLIDER FIX) --- */
+        .slider-wrapper::-webkit-scrollbar { height: 4px; }
+        .slider-wrapper::-webkit-scrollbar-track { background: var(--border); }
+        .slider-wrapper::-webkit-scrollbar-thumb { background: var(--accent); }
+
+        .slider-track { display: inline-flex; gap: 20px; }
+
+        .slide {
+            flex: 0 0 350px;
+            height: 450px; /* Force la hauteur */
+            background: #e0e0e0; /* Gris clair en attendant l'image */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            display: block !important; /* Force l'affichage */
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .slide:hover img { transform: scale(1.05); }
+
+        /* --- TESTIMONIALS --- */
         #testimonial-slider {
             background: var(--accent);
             color: var(--bg);
@@ -158,50 +148,20 @@
 
         .testimonial { display: none; width: 100%; }
         .testimonial.active { display: block; animation: fadeIn 0.8s; }
-        
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .testimonial p { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(20px, 4vw, 28px); max-width: 800px; margin: 0 auto; color: var(--bg); }
 
-        .testimonial p { 
-            font-family: 'Playfair Display', serif; 
-            font-style: italic; 
-            font-size: clamp(20px, 4vw, 28px); 
-            max-width: 800px; 
-            margin: 0 auto; 
-            color: var(--bg);
-        }
-
-        /* --- FOOTER (ICON FIX) --- */
-        footer {
-            background: var(--bg);
-            padding: 80px 10% 40px;
-            text-align: center;
-        }
-
-        .newsletter input {
-            padding: 15px;
-            border: 1px solid var(--border);
-            background: white;
-            color: var(--text);
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
-        }
-
+        footer { background: var(--bg); padding: 80px 10% 40px; text-align: center; }
+        .newsletter input { padding: 15px; border: 1px solid var(--border); background: white; color: var(--text); width: 100%; max-width: 400px; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
         .footer-links { margin-top: 40px; }
-        .footer-links a { 
-            color: var(--accent); 
-            font-size: 28px; 
-            margin: 0 15px; 
-            text-decoration: none; 
-            transition: 0.3s;
-        }
+        .footer-links a { color: var(--accent); font-size: 28px; margin: 0 15px; text-decoration: none; transition: 0.3s; }
         .footer-links a:hover { transform: scale(1.2); color: var(--text); }
 
         @media (max-width: 768px) {
             section { padding: 80px 5%; }
             .nav-links { display: none; }
             h1 { font-size: 50px; }
+            .slide { flex: 0 0 280px; height: 380px; }
         }
     </style>
 </head>
@@ -248,17 +208,29 @@
 
 <section id="projets">
     <div class="container">
-        <h2 style="text-align: left;">Sélection de travaux</h2>
-        <div class="grid">
-            <div class="project-item">
-                <img src="images/projet1.jpg" alt="Projet 1" class="project-img">
-                <h3 style="font-size: 18px; margin-top: 15px;">01. Identité Digitale</h3>
-            </div>
-            <div class="project-item">
-                <img src="images/projet2.jpg" alt="Projet 2" class="project-img">
-                <h3 style="font-size: 18px; margin-top: 15px;">02. Social Content</h3>
+        <h2 style="text-align: left;">Portfolio</h2>
+        <p style="margin-bottom: 30px;">Découvrez mes dernières réalisations et univers créatifs.</p>
+        
+        <div class="slider-wrapper">
+            <div class="slider-track">
+                <div class="slide"><img src="images/1.png" alt="Projet 1"></div>
+    <div class="slide"><img src="images/2.png" alt="Projet 2"></div>
+    <div class="slide"><img src="images/3.png" alt="Projet 3"></div>
+    <div class="slide"><img src="images/4.png" alt="Projet 4"></div>
+    <div class="slide"><img src="images/5.png" alt="Projet 5"></div>
+    <div class="slide"><img src="images/6.png" alt="Projet 6"></div>
+    <div class="slide"><img src="images/7.png" alt="Projet 7"></div>
+    <div class="slide"><img src="images/8.png" alt="Projet 8"></div>
+    <div class="slide"><img src="images/9.png" alt="Projet 9"></div>
+    <div class="slide"><img src="images/10.png" alt="Projet 10"></div>
+    <div class="slide"><img src="images/11.png" alt="Projet 11"></div>
+    <div class="slide"><img src="images/12.png" alt="Projet 12"></div>
+    <div class="slide"><img src="images/13.png" alt="Projet 13"></div>
+    <div class="slide"><img src="images/14.png" alt="Projet 14"></div>
             </div>
         </div>
+        
+        <p style="font-size: 12px; margin-top: 15px; opacity: 0.5; text-align: right;">Faites glisser pour défiler →</p>
     </div>
 </section>
 
@@ -289,9 +261,9 @@
         </div>
         
         <div class="footer-links">
-            <a href="https://instagram.com/tonprofil" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com/in/tonprofil" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://tiktok.com/@tonprofil" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/adressessecretes/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/elona-renaux/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.tiktok.com/@adressessecretes" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
         
         <p style="margin: 40px auto 0; font-size: 10px; letter-spacing: 1px; opacity: 0.6;">© 2026 ELONA STUDIO — DESIGN ÉDITORIAL</p>
@@ -299,10 +271,9 @@
 </footer>
 
 <script>
-    // SCRIPT DU SLIDER (Transitions)
+    // Slider Témoignages
     let current = 0;
     const items = document.querySelectorAll('.testimonial');
-    
     function nextSlide() {
         if(items.length > 0) {
             items[current].classList.remove('active');
@@ -310,9 +281,15 @@
             items[current].classList.add('active');
         }
     }
-
-    // Change de témoignage toutes les 5 secondes
     setInterval(nextSlide, 5000);
+
+    // Diagnostic Images : Si une image ne charge pas, on met une bordure rouge pour alerter
+    document.querySelectorAll('.slide img').forEach(img => {
+        img.onerror = function() {
+            this.style.border = "2px solid red";
+            console.error("Image non trouvée : " + this.src);
+        };
+    });
 </script>
 
 </body>
