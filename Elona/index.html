@@ -6,12 +6,14 @@
     <title>ELONA | Stratégie Digitale</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
-            --bg: #F1EFE7; /* Ton beige */
+            --bg: #F1EFE7; /* Beige */
             --text: #1a1a1a;
-            --accent: #1612D3; /* Ton bleu */
+            --accent: #1612D3; /* Bleu */
             --white: #ffffff;
             --border: #d1cfc7;
         }
@@ -28,7 +30,6 @@
         }
 
         /* --- TYPOGRAPHIE --- */
-        /* On utilise Giaza si installée, sinon Playfair Display */
         h1, h2, h3, .logo { 
             font-family: 'Giaza', 'Playfair Display', serif; 
             font-weight: 400;
@@ -106,6 +107,7 @@
             transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
             margin-top: 30px;
             border: none;
+            cursor: pointer;
         }
 
         .btn:hover { 
@@ -136,53 +138,65 @@
             aspect-ratio: 1/1; 
             object-fit: cover; 
             margin-bottom: 20px;
-            filter: sepia(20%); /* Petit effet vintage */
-            transition: 0.5s;
+            transition: 0.6s ease;
         }
+        .project-item { overflow: hidden; }
+        .project-item:hover .project-img { transform: scale(1.05); }
 
-        .card:hover .project-img { filter: sepia(0%); }
-
-        /* --- TESTIMONIALS --- */
+        /* --- TESTIMONIALS (SLIDER FIX) --- */
         #testimonial-slider {
             background: var(--accent);
             color: var(--bg);
             text-align: center;
             border: none;
+            padding: 100px 10%;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        .testimonial { display: none; width: 100%; }
+        .testimonial.active { display: block; animation: fadeIn 0.8s; }
+        
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
         .testimonial p { 
             font-family: 'Playfair Display', serif; 
             font-style: italic; 
-            font-size: 24px; 
+            font-size: clamp(20px, 4vw, 28px); 
             max-width: 800px; 
             margin: 0 auto; 
             color: var(--bg);
         }
 
-        /* --- FOOTER --- */
+        /* --- FOOTER (ICON FIX) --- */
         footer {
             background: var(--bg);
-            padding: 80px 10%;
+            padding: 80px 10% 40px;
             text-align: center;
         }
 
         .newsletter input {
             padding: 15px;
             border: 1px solid var(--border);
-            background: transparent;
+            background: white;
             color: var(--text);
             width: 100%;
             max-width: 400px;
             margin-bottom: 20px;
-            font-family: inherit;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        .footer-links img { 
-            width: 24px; 
+        .footer-links { margin-top: 40px; }
+        .footer-links a { 
+            color: var(--accent); 
+            font-size: 28px; 
             margin: 0 15px; 
-            transition: 0.3s; 
-            filter: brightness(0); /* Icônes en noir */
+            text-decoration: none; 
+            transition: 0.3s;
         }
+        .footer-links a:hover { transform: scale(1.2); color: var(--text); }
 
         @media (max-width: 768px) {
             section { padding: 80px 5%; }
@@ -205,7 +219,7 @@
 
 <section id="home">
     <div class="container">
-        <p style="text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; color: var(--accent);">Studio de stratégie</p>
+        <p style="text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; color: var(--accent); font-weight: 600;">Studio de stratégie</p>
         <h1>Stratégie digitale & contenu d'exception.</h1>
         <p>J'accompagne les marques audacieuses pour transformer leur visibilité en levier de croissance mesurable.</p>
         <a href="#contact" class="btn">Travaillons ensemble</a>
@@ -237,21 +251,31 @@
         <h2 style="text-align: left;">Sélection de travaux</h2>
         <div class="grid">
             <div class="project-item">
-                <img src="images/projet1.jpg" alt="Projet" class="project-img">
-                <h3 style="font-size: 18px;">01. Identité Digitale</h3>
+                <img src="images/projet1.jpg" alt="Projet 1" class="project-img">
+                <h3 style="font-size: 18px; margin-top: 15px;">01. Identité Digitale</h3>
             </div>
             <div class="project-item">
-                <img src="images/projet2.jpg" alt="Projet" class="project-img">
-                <h3 style="font-size: 18px;">02. Social Content</h3>
+                <img src="images/projet2.jpg" alt="Projet 2" class="project-img">
+                <h3 style="font-size: 18px; margin-top: 15px;">02. Social Content</h3>
             </div>
         </div>
     </div>
 </section>
 
 <section id="testimonial-slider">
-    <div class="testimonial active">
-        <p>"Elona a apporté une réelle valeur à notre structure. Sa compréhension des enjeux est exceptionnelle."</p>
-        <br><small style="text-transform: uppercase; letter-spacing: 2px;">Xavier Letzelter — General Manager</small>
+    <div class="container">
+        <div class="testimonial active">
+            <p>"Elona a apporté une réelle valeur à notre structure. Sa compréhension des enjeux est exceptionnelle."</p>
+            <br><small style="text-transform: uppercase; letter-spacing: 2px;">Xavier Letzelter — General Manager</small>
+        </div>
+        <div class="testimonial">
+            <p>"Une approche structurée et orientée performance. Les résultats ont dépassé nos objectifs."</p>
+            <br><small style="text-transform: uppercase; letter-spacing: 2px;">Aimee Bergeret — Head of Brand Marketing</small>
+        </div>
+        <div class="testimonial">
+            <p>"Professionnalisme et initiative. Elle a optimisé tout notre plan de communication."</p>
+            <br><small style="text-transform: uppercase; letter-spacing: 2px;">Lino Fillaudeau — Country Manager France</small>
+        </div>
     </div>
 </section>
 
@@ -264,14 +288,32 @@
             <button class="btn">S'abonner</button>
         </div>
         
-        <div class="footer-links" style="margin-top: 60px;">
-            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <div class="footer-links">
+            <a href="https://instagram.com/tonprofil" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/tonprofil" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://tiktok.com/@tonprofil" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
         
         <p style="margin: 40px auto 0; font-size: 10px; letter-spacing: 1px; opacity: 0.6;">© 2026 ELONA STUDIO — DESIGN ÉDITORIAL</p>
     </div>
 </footer>
+
+<script>
+    // SCRIPT DU SLIDER (Transitions)
+    let current = 0;
+    const items = document.querySelectorAll('.testimonial');
+    
+    function nextSlide() {
+        if(items.length > 0) {
+            items[current].classList.remove('active');
+            current = (current + 1) % items.length;
+            items[current].classList.add('active');
+        }
+    }
+
+    // Change de témoignage toutes les 5 secondes
+    setInterval(nextSlide, 5000);
+</script>
 
 </body>
 </html>
