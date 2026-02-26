@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELONA | Stratégie Digitale</title>
+    <title>ELONA | Stratégie Digitale & Création de Contenu</title>
+    <meta name="description" content="Studio de stratégie digitale par Elona. Accompagnement sur mesure pour marques audacieuses : audit, contenu et performance.">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -47,121 +48,131 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .logo { 
-            font-size: 24px; 
-            letter-spacing: 4px; 
-            text-decoration: none; 
-            color: var(--accent);
-            font-weight: 700;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text);
-            font-size: 12px;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-left: 30px;
-            transition: 0.3s;
-        }
-
+        .logo { font-size: 24px; letter-spacing: 4px; text-decoration: none; color: var(--accent); font-weight: 700; }
+        .nav-links a { text-decoration: none; color: var(--text); font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 2px; margin-left: 30px; transition: 0.3s; }
         .nav-links a:hover { color: var(--accent); }
 
-        section { padding: 120px 8%; border-bottom: 1px solid var(--border); }
+        section { padding: 100px 8%; border-bottom: 1px solid var(--border); }
         .container { max-width: 1100px; margin: 0 auto; }
 
-        h1 { font-size: clamp(45px, 10vw, 90px); line-height: 0.9; margin-bottom: 40px; color: var(--accent); }
-        h2 { font-size: clamp(30px, 5vw, 50px); margin-bottom: 60px; text-align: center; }
-        p { font-size: 16px; font-weight: 300; letter-spacing: 0.5px; }
+        h1 { font-size: clamp(40px, 8vw, 80px); line-height: 0.9; margin-bottom: 40px; color: var(--accent); }
+        h2 { font-size: clamp(28px, 4vw, 45px); margin-bottom: 60px; text-align: center; }
 
         .btn {
             display: inline-block;
             background: var(--accent);
             color: #fff;
-            padding: 20px 45px;
+            padding: 18px 40px;
             text-decoration: none;
             font-weight: 500;
-            font-size: 12px;
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            margin-top: 30px;
             border: none;
             cursor: pointer;
         }
+        .btn:hover { background: var(--text); transform: translateY(-3px); }
 
-        .btn:hover { background: var(--text); transform: translateY(-5px); }
+        /* GRID & CARDS */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { padding: 40px 25px; text-align: center; border: 1px solid var(--border); transition: 0.3s; background: rgba(255,255,255,0.3); }
+        .card:hover { border-color: var(--accent); background: #fff; }
+        .card h3 { font-size: 22px; margin-bottom: 15px; color: var(--accent); }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .card { padding: 40px 20px; text-align: center; border: 1px solid var(--border); transition: 0.3s; }
-        .card:hover { border-color: var(--accent); }
-        .card h3 { font-size: 24px; margin-bottom: 20px; color: var(--accent); }
+        /* ABOUT SECTION */
+        .about-flex { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .about-text { flex: 1; min-width: 300px; }
+        .about-image { flex: 1; min-width: 300px; filter: grayscale(1); transition: 0.5s; }
+        .about-image:hover { filter: grayscale(0); }
+        .about-image img { width: 100%; height: auto; border: 1px solid var(--border); }
 
-        /* --- SLIDER PORTFOLIO --- */
-        .slider-wrapper {
-            width: 100%;
-            overflow-x: auto;
-            overflow-y: hidden;
-            white-space: nowrap;
-            cursor: grab;
-            padding-bottom: 30px;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .slider-wrapper::-webkit-scrollbar { height: 4px; }
-        .slider-wrapper::-webkit-scrollbar-track { background: var(--border); }
-        .slider-wrapper::-webkit-scrollbar-thumb { background: var(--accent); }
-
+        /* PORTFOLIO SLIDER */
+        .slider-wrapper { width: 100%; overflow-x: auto; white-space: nowrap; cursor: grab; padding-bottom: 20px; }
         .slider-track { display: inline-flex; gap: 20px; }
+       /* --- PORTFOLIO SLIDER --- */
+.slide {
+    flex: 0 0 350px;
+    height: 450px;
+    background: #e0e0e0;
+    position: relative;
+    /* --- AJOUTS ICI --- */
+    border-radius: 20px; /* Arrondit les angles */
+    overflow: hidden;    /* Indispensable pour que l'image ne dépasse pas des bords arrondis */
+    border: 1px solid var(--border); /* Optionnel : ajoute un petit contour élégant */
+}
 
-        .slide {
-            flex: 0 0 350px;
-            height: 450px; /* Force la hauteur */
-            background: #e0e0e0; /* Gris clair en attendant l'image */
-            overflow: hidden;
-            position: relative;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            display: block !important; /* Force l'affichage */
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
+.slide img {
+    width: 100%;
+    height: 100%;
+    display: block !important;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 20px; /* Assure que l'image prend aussi l'arrondi */
+}
         .slide:hover img { transform: scale(1.05); }
 
-        /* --- TESTIMONIALS --- */
-        #testimonial-slider {
-            background: var(--accent);
-            color: var(--bg);
-            text-align: center;
+        /* TESTIMONIALS (Updated) */
+        #testimonial-slider { 
+            background: var(--accent); 
+            color: var(--bg); 
+            text-align: center; 
+            padding: 100px 10%; 
             border: none;
-            padding: 100px 10%;
-            min-height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .testimonial { display: none; width: 100%; }
-        .testimonial.active { display: block; animation: fadeIn 0.8s; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .testimonial p { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(20px, 4vw, 28px); max-width: 800px; margin: 0 auto; color: var(--bg); }
+        .testimonial { 
+            display: none; 
+            width: 100%; 
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 0.8s; 
+        }
 
-        footer { background: var(--bg); padding: 80px 10% 40px; text-align: center; }
-        .newsletter input { padding: 15px; border: 1px solid var(--border); background: white; color: var(--text); width: 100%; max-width: 400px; margin-bottom: 20px; font-family: 'Montserrat', sans-serif; }
-        .footer-links { margin-top: 40px; }
-        .footer-links a { color: var(--accent); font-size: 28px; margin: 0 15px; text-decoration: none; transition: 0.3s; }
-        .footer-links a:hover { transform: scale(1.2); color: var(--text); }
+        .testimonial.active { 
+            display: block; 
+        }
+
+        .client-photo { 
+            width: 90px; 
+            height: 90px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+            border: 2px solid var(--bg);
+        }
+
+        .testimonial p { 
+            font-family: 'Playfair Display', serif; 
+            font-style: italic; 
+            font-size: clamp(20px, 4vw, 28px); 
+            line-height: 1.4;
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(10px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        }
+
+        /* CONTACT FORM */
+        .contact-container { max-width: 600px; margin: 0 auto; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        input, textarea { width: 100%; padding: 15px; border: 1px solid var(--border); background: white; font-family: 'Montserrat', sans-serif; outline: none; transition: 0.3s; }
+        input:focus, textarea:focus { border-color: var(--accent); }
+        textarea { height: 120px; resize: vertical; }
+
+        footer { background: var(--bg); padding: 60px 10% 30px; text-align: center; }
+        .footer-links { margin: 30px 0; }
+        .footer-links a { color: var(--accent); font-size: 24px; margin: 0 15px; transition: 0.3s; }
+        .footer-links a:hover { color: var(--text); transform: translateY(-3px); }
 
         @media (max-width: 768px) {
-            section { padding: 80px 5%; }
+            section { padding: 60px 5%; }
             .nav-links { display: none; }
-            h1 { font-size: 50px; }
-            .slide { flex: 0 0 280px; height: 380px; }
+            h1 { font-size: 45px; }
+            .about-flex { flex-direction: column-reverse; }
         }
     </style>
 </head>
@@ -171,6 +182,7 @@
 <nav>
     <a href="#" class="logo">ELONA.</a>
     <div class="nav-links">
+        <a href="#about">À Propos</a>
         <a href="#services">Services</a>
         <a href="#projets">Projets</a>
         <a href="#contact">Contact</a>
@@ -179,10 +191,27 @@
 
 <section id="home">
     <div class="container">
-        <p style="text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; color: var(--accent); font-weight: 600;">Studio de stratégie</p>
+        <p style="text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; color: var(--accent); font-weight: 600; font-size: 12px;">Studio de stratégie</p>
         <h1>Stratégie digitale & contenu d'exception.</h1>
-        <p>J'accompagne les marques audacieuses pour transformer leur visibilité en levier de croissance mesurable.</p>
-        <a href="#contact" class="btn">Travaillons ensemble</a>
+        <p style="max-width: 600px; margin-bottom: 30px;">J'accompagne les marques audacieuses pour transformer leur visibilité en levier de croissance mesurable à travers un design éditorial et une analyse de performance poussée.</p>
+        <a href="#contact" class="btn">Démarrer un projet</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="about-flex">
+            <div class="about-text">
+                <h2 style="text-align: left; margin-bottom: 30px;">L'approche Elona</h2>
+                <p>Spécialisée dans l'univers du lifestyle et des marques créatives, je fusionne la rigueur analytique et l'esthétique visuelle. Mon but ? Créer des écosystèmes digitaux où chaque pixel sert un objectif business.</p>
+                <br>
+                <p><b>Expertise :</b> Social Media, Branding, Data Analysis.</p>
+                <a href="#projets" class="btn" style="background: transparent; border: 1px solid var(--accent); color: var(--accent); margin-top: 20px;">Voir mon travail</a>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800" alt="Elona - Fondatrice">
+            </div>
+        </div>
     </div>
 </section>
 
@@ -191,16 +220,19 @@
         <h2>Mes Expertises</h2>
         <div class="grid">
             <div class="card">
+                <i class="fas fa-chess-king" style="color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Stratégie</h3>
-                <p>Audit complet, analyse de marché et définition d'un positionnement unique.</p>
+                <p>Audit complet, analyse de marché et définition d'un positionnement unique pour émerger.</p>
             </div>
             <div class="card">
+                <i class="fas fa-pen-nib" style="color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Contenu</h3>
-                <p>Direction artistique et création de contenus impactants pour vos plateformes.</p>
+                <p>Direction artistique et création de contenus (photo/vidéo/copywriting) haut de gamme.</p>
             </div>
             <div class="card">
+                <i class="fas fa-chart-line" style="color: var(--accent); margin-bottom: 15px;"></i>
                 <h3>Performance</h3>
-                <p>Analyse de données et optimisation pour garantir votre croissance.</p>
+                <p>Optimisation des conversions et analyse de données pour un ROI maximisé.</p>
             </div>
         </div>
     </div>
@@ -208,65 +240,94 @@
 
 <section id="projets">
     <div class="container">
-        <h2 style="text-align: left;">Portfolio</h2>
-        <p style="margin-bottom: 30px;">Découvrez mes dernières réalisations et univers créatifs.</p>
+        <h2 style="text-align: left; margin-bottom: 10px;">Portfolio</h2>
+        <p style="margin-bottom: 40px; opacity: 0.7;">Sélection de projets récents • 2024-2026</p>
         
         <div class="slider-wrapper">
             <div class="slider-track">
                 <div class="slide"><img src="images/1.png" alt="Projet 1"></div>
-    <div class="slide"><img src="images/2.png" alt="Projet 2"></div>
-    <div class="slide"><img src="images/3.png" alt="Projet 3"></div>
-    <div class="slide"><img src="images/4.png" alt="Projet 4"></div>
-    <div class="slide"><img src="images/5.png" alt="Projet 5"></div>
-    <div class="slide"><img src="images/6.png" alt="Projet 6"></div>
-    <div class="slide"><img src="images/7.png" alt="Projet 7"></div>
-    <div class="slide"><img src="images/8.png" alt="Projet 8"></div>
-    <div class="slide"><img src="images/9.png" alt="Projet 9"></div>
-    <div class="slide"><img src="images/10.png" alt="Projet 10"></div>
-    <div class="slide"><img src="images/11.png" alt="Projet 11"></div>
-    <div class="slide"><img src="images/12.png" alt="Projet 12"></div>
-    <div class="slide"><img src="images/13.png" alt="Projet 13"></div>
-    <div class="slide"><img src="images/14.png" alt="Projet 14"></div>
+                <div class="slide"><img src="images/2.png" alt="Projet 2"></div>
+                <div class="slide"><img src="images/3.png" alt="Projet 3"></div>
+                <div class="slide"><img src="images/4.png" alt="Projet 4"></div>
+                <div class="slide"><img src="images/5.png" alt="Projet 5"></div>
+                <div class="slide"><img src="images/6.png" alt="Projet 6"></div>
+                <div class="slide"><img src="images/7.png" alt="Projet 7"></div>
+                <div class="slide"><img src="images/8.png" alt="Projet 8"></div>
+                <div class="slide"><img src="images/9.png" alt="Projet 9"></div>
+                <div class="slide"><img src="images/10.png" alt="Projet 10"></div>
+                <div class="slide"><img src="images/11.png" alt="Projet 11"></div>
+                <div class="slide"><img src="images/12.png" alt="Projet 12"></div>
+                <div class="slide"><img src="images/13.png" alt="Projet 13"></div>
+                <div class="slide"><img src="images/14.png" alt="Projet 14"></div>
             </div>
         </div>
-        
-        <p style="font-size: 12px; margin-top: 15px; opacity: 0.5; text-align: right;">Faites glisser pour défiler →</p>
+        <p style="font-size: 10px; margin-top: 15px; opacity: 0.5; text-align: right; text-transform: uppercase; letter-spacing: 1px;">Faites glisser pour explorer →</p>
     </div>
 </section>
 
 <section id="testimonial-slider">
     <div class="container">
+        
         <div class="testimonial active">
-            <p>"Elona a apporté une réelle valeur à notre structure. Sa compréhension des enjeux est exceptionnelle."</p>
-            <br><small style="text-transform: uppercase; letter-spacing: 2px;">Xavier Letzelter — General Manager</small>
+            <img src="images/xavier.jpg" alt="Xavier Letzelter" class="client-photo">
+            <p>" Je ne peux que recommander Elona pour toute opportunité future dans le domaine du marketing digital. Elle apportera, sans aucun doute, une réelle valeur à toute structure qui lui fera confiance. "</p>
+            <br>
+            <small style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                Xavier Letzelter — General Manager
+            </small>
         </div>
+
         <div class="testimonial">
-            <p>"Une approche structurée et orientée performance. Les résultats ont dépassé nos objectifs."</p>
-            <br><small style="text-transform: uppercase; letter-spacing: 2px;">Aimee Bergeret — Head of Brand Marketing</small>
+            <img src="images/aimee.jpg" alt="Aimee Bergeret" class="client-photo">
+            <p>" Elona a contribué à l'essor de notre marque, notamment sur les réseaux sociaux et nous faisant connaître auprès des influenceurs. Organisée et avec une bonne compréhension des enjeux de l'entreprise, Elona est toujours investie pour atteindre les objectifs fixés. "</p>
+            <br>
+            <small style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                Aimee Bergeret — Head of Brand Marketing
+            </small>
         </div>
+
         <div class="testimonial">
-            <p>"Professionnalisme et initiative. Elle a optimisé tout notre plan de communication."</p>
-            <br><small style="text-transform: uppercase; letter-spacing: 2px;">Lino Fillaudeau — Country Manager France</small>
+            <img src="images/lino.jpg" alt="Lino Fillaudeau" class="client-photo">
+            <p>" Je suis certain qu'Elona sera en mesure d'optimiser et améliorer votre plan de communication tout en apportant son aide sur d'autres besoins. Elle a exercé ses fonctions avec enthousiasme et professionnalisme et était particulièrement appréciée par ses collègues pour son anticipation et ses prises d'initiatives."</p>
+            <br>
+            <small style="text-transform: uppercase; letter-spacing: 2px; font-weight: 600;">
+                Lino Fillaudeau — Country Manager France
+            </small>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container" style="text-align: center;">
+        <h2 style="color:var(--accent); margin-bottom: 20px;">Parlons de votre projet.</h2>
+        <p style="margin-bottom: 50px;">Disponible pour de nouvelles collaborations sélectives.</p>
+        
+        <div class="contact-container">
+            <form action="#">
+                <div class="form-group">
+                    <input type="text" placeholder="Nom complet" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Adresse Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Parlez-moi de votre projet..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Envoyer la demande</button>
+            </form>
         </div>
     </div>
 </section>
 
-<footer id="contact">
+<footer>
     <div class="container">
-        <h2 style="color:var(--accent)">Restons en contact.</h2>
-        <div class="newsletter">
-            <input type="email" placeholder="Votre adresse email">
-            <br>
-            <button class="btn">S'abonner</button>
-        </div>
-        
         <div class="footer-links">
             <a href="https://www.instagram.com/adressessecretes/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://www.linkedin.com/in/elona-renaux/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://www.tiktok.com/@adressessecretes" target="_blank"><i class="fab fa-tiktok"></i></a>
         </div>
-        
-        <p style="margin: 40px auto 0; font-size: 10px; letter-spacing: 1px; opacity: 0.6;">© 2026 ELONA STUDIO — DESIGN ÉDITORIAL</p>
+        <p style="font-size: 10px; letter-spacing: 2px; opacity: 0.6; text-transform: uppercase;">© 2026 ELONA STUDIO — DESIGN ÉDITORIAL & STRATÉGIE</p>
     </div>
 </footer>
 
@@ -281,14 +342,16 @@
             items[current].classList.add('active');
         }
     }
-    setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 6000);
 
-    // Diagnostic Images : Si une image ne charge pas, on met une bordure rouge pour alerter
-    document.querySelectorAll('.slide img').forEach(img => {
-        img.onerror = function() {
-            this.style.border = "2px solid red";
-            console.error("Image non trouvée : " + this.src);
-        };
+    // Gestion du scroll fluide
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
     });
 </script>
 
