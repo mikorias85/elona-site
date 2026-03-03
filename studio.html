@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio — ELONA Studio</title>
+  <meta name="description" content="Découvrez l'approche, les expertises, le process et les tarifs du studio ELONA, spécialisé en stratégie digitale premium et lifestyle.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1612D3">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>E</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="shared.css">
+
+  <style>
+    /* ── ABOUT SECTION ── */
+    .about__grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+    .about__text h2{text-align:left;margin-bottom:20px}
+    .about__text p{opacity:0.75;margin-bottom:14px;font-size:15px}
+    .about__tags{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+    .about__tag{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:8px 16px;border:1px solid var(--border);border-radius:50px;color:var(--accent);background:rgba(22,18,211,0.04);transition:background var(--transition),border-color var(--transition),color var(--transition)}
+    .about__tag:hover{background:var(--accent);color:var(--white);border-color:var(--accent)}
+    .about__visual{border-radius:var(--radius-lg);overflow:hidden;filter:grayscale(1);box-shadow:var(--shadow-md);transition:filter 0.9s var(--ease-out)}
+    .about__visual:hover{filter:grayscale(0)}
+    .about__visual img{width:100%;transition:transform 0.9s var(--ease-out)}
+    .about__visual:hover img{transform:scale(1.04)}
+
+    /* ── SERVICES ── */
+    .services__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .service-card{padding:44px 28px;border:1px solid var(--border);background:rgba(255,255,255,0.5);border-radius:var(--radius-md);position:relative;overflow:hidden;transition:box-shadow var(--transition),transform var(--transition),border-color var(--transition)}
+    .service-card::before{content:'';position:absolute;inset:0;background:var(--accent);transform:translateY(101%);transition:transform 0.55s var(--ease-out);z-index:0}
+    .service-card:hover::before{transform:translateY(0)}
+    .service-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-6px);border-color:var(--accent)}
+    .service-card>*{position:relative;z-index:1}
+    .service-card__num{font-size:11px;color:var(--accent);font-weight:700;transition:color 0.4s}
+    .service-card h3{margin:14px 0 10px;transition:color 0.4s}
+    .service-card p{font-size:13px;opacity:0.7;margin-bottom:18px;transition:color 0.4s,opacity 0.4s}
+    .service-card__del{font-size:10px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1.5px;transition:color 0.4s}
+    .service-card:hover .service-card__num,
+    .service-card:hover h3,
+    .service-card:hover p,
+    .service-card:hover .service-card__del{color:var(--white);opacity:1}
+
+    /* ── PROCESS ── */
+    .process__grid{display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+    .process__grid::before{content:'';position:absolute;top:34px;left:calc(12.5% + 35px);right:calc(12.5% + 35px);height:1px;background:linear-gradient(90deg,var(--accent),rgba(22,18,211,0.06));z-index:0}
+    .process__step{padding-right:26px;position:relative;z-index:1;transition:transform var(--transition)}
+    .process__step:hover{transform:translateY(-5px)}
+    .process__num{width:68px;height:68px;border-radius:50%;background:var(--bg);border:1.5px solid var(--accent);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:19px;color:var(--accent);margin-bottom:24px;transition:background var(--transition),color var(--transition)}
+    .process__step:hover .process__num{background:var(--accent);color:var(--white)}
+    .process__step h3{font-size:16px;margin-bottom:10px;text-transform:none}
+    .process__step p{font-size:13px;opacity:0.7;line-height:1.6}
+
+    /* ── PRICING ── */
+    .pricing__tabs{display:flex;justify-content:center;gap:0;margin:0 auto 60px;width:fit-content;border:1.5px solid var(--border);border-radius:50px;padding:5px}
+    .pricing__tab{padding:12px 30px;font-family:var(--font-sans);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;border:none;border-radius:50px;background:transparent;color:var(--text);cursor:pointer;opacity:0.5;transition:background var(--transition),color var(--transition),opacity 0.3s}
+    .pricing__tab.active{background:var(--accent);color:var(--white);opacity:1}
+    .pricing__tab:hover:not(.active){opacity:0.9}
+    .pricing__panel{display:none;grid-template-columns:repeat(3,1fr);gap:22px;animation:slideUp 0.42s var(--ease-out)}
+    .pricing__panel.active{display:grid}
+    .pricing-card{border:1px solid var(--border);border-radius:var(--radius-md);padding:42px 30px;background:rgba(241,239,231,0.35);position:relative;display:flex;flex-direction:column;transition:box-shadow var(--transition),transform var(--transition)}
+    .pricing-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
+    .pricing-card--featured{border-color:var(--accent);background:var(--white)}
+    .pricing-card__badge{display:none;position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:var(--white);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:5px 15px;border-radius:50px;white-space:nowrap}
+    .pricing-card--featured .pricing-card__badge{display:block}
+    .pricing-card__name{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:14px}
+    .pricing-card__price{font-family:var(--font-serif);font-size:clamp(32px,4vw,44px);font-weight:700;color:var(--text);line-height:1;margin-bottom:5px}
+    .pricing-card__price sup{font-size:0.45em;vertical-align:top;margin-top:8px;display:inline-block}
+    .pricing-card__freq{font-size:12px;opacity:0.48;margin-bottom:26px}
+    .pricing-card__hr{height:1px;background:var(--border);margin-bottom:26px}
+    .pricing-card__features{list-style:none;flex:1;margin-bottom:30px}
+    .pricing-card__features li{font-size:13px;opacity:0.78;padding:8px 0;border-bottom:1px solid var(--border-light);display:flex;align-items:center;gap:10px}
+    .pricing-card__features li:last-child{border-bottom:none}
+    .pricing-card__features li::before{content:'—';color:var(--accent);font-weight:700;flex-shrink:0}
+
+    /* ── CONTACT ── */
+    .contact__intro{text-align:center;opacity:0.7;max-width:460px;margin:0 auto 50px}
+    .contact__form{max-width:570px;margin:0 auto}
+    .form-group{position:relative;margin-bottom:20px}
+    .form-group input,.form-group textarea{width:100%;padding:22px 22px 8px;border:1.5px solid var(--border);background:var(--white);border-radius:var(--radius-md);outline:none;font-family:var(--font-sans);font-size:15px;color:var(--text);transition:border-color 0.3s,box-shadow 0.3s}
+    .form-group textarea{height:155px;resize:none;padding-top:28px}
+    .form-group label{position:absolute;left:22px;top:50%;transform:translateY(-50%);font-size:13px;color:rgba(26,26,26,0.45);pointer-events:none;transition:top 0.22s,font-size 0.22s,color 0.22s,transform 0.22s}
+    .form-group.has-textarea label{top:22px;transform:none}
+    .form-group input:focus+label,.form-group input:not(:placeholder-shown)+label,
+    .form-group textarea:focus+label,.form-group textarea:not(:placeholder-shown)+label{top:8px;transform:none;font-size:10px;color:var(--accent);font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+    .form-group input:focus,.form-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(22,18,211,0.07)}
+    .form-success{display:none;text-align:center;padding:44px 32px;background:rgba(22,18,211,0.04);border:1px solid rgba(22,18,211,0.13);border-radius:var(--radius-md);animation:fadeIn 0.6s var(--ease-out);max-width:570px;margin:0 auto}
+    .form-success.visible{display:block}
+    .form-success__icon{font-size:36px;color:var(--accent);margin-bottom:14px}
+    .form-success h3{font-size:21px;margin-bottom:10px;text-transform:none}
+    .form-success p{opacity:0.65;font-size:14px}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){
+      .services__grid{grid-template-columns:repeat(2,1fr)}
+      .pricing__panel{grid-template-columns:repeat(2,1fr)}
+      .process__grid{grid-template-columns:repeat(2,1fr);gap:40px}
+      .process__grid::before{display:none}
+      .process__step{padding-right:0}
+    }
+    @media(max-width:768px){
+      .about__grid{grid-template-columns:1fr;gap:36px}
+      .about__text h2{text-align:center}
+      .about__tags{justify-content:center}
+      .services__grid{grid-template-columns:1fr}
+      .process__grid{grid-template-columns:1fr;gap:30px}
+      .pricing__panel{grid-template-columns:1fr}
+      .pricing__tabs{overflow-x:auto;width:100%;justify-content:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" role="navigation" aria-label="Navigation principale">
+    <a href="index.html" class="nav__logo" aria-label="ELONA Studio — accueil">ELONA.</a>
+    <button class="nav__burger" id="nav-burger" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+    <ul class="nav__list" id="nav-list" role="list">
+      <li><a href="studio.html" class="nav-active">Studio</a></li>
+      <li><a href="studio.html#services">Expertises</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="studio.html#tarifs">Tarifs</a></li>
+      <li><a href="studio.html#contact" class="btn" style="padding:10px 24px;font-size:10px">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header" aria-labelledby="page-title">
+      <div class="container reveal">
+        <span class="label">À propos</span>
+        <h1 id="page-title">Le Studio</h1>
+        <p>Stratégie digitale premium au service des marques lifestyle, depuis Paris vers le monde.</p>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <span class="label" style="margin-bottom:14px">L'approche</span>
+            <h2 id="about-title">Une vision,<br><em>une méthode.</em></h2>
+            <p>Spécialisé dans l'univers du lifestyle et des marques créatives, le studio ELONA fusionne la rigueur analytique et l'esthétique visuelle pour créer des écosystèmes où chaque interaction sert un objectif business concret.</p>
+            <p>Nous ne créons pas du contenu. Nous architecturons des présences digitales qui durent — des stratégies pensées sur le long terme, ancrées dans vos codes de marque et orientées vers la performance.</p>
+            <p>Fondé par Elona Renaux, le studio accompagne une clientèle sélective de marques premium, concepts stores et créateurs qui refusent de se fondre dans la masse.</p>
+            <div class="about__tags">
+              <span class="about__tag">Social Media Strategy</span>
+              <span class="about__tag">Branding Éditorial</span>
+              <span class="about__tag">Performance Analysis</span>
+              <span class="about__tag">Influence Marketing</span>
+              <span class="about__tag">Direction Artistique</span>
+              <span class="about__tag">Content Production</span>
+            </div>
+          </div>
+          <div class="about__visual reveal reveal--d2">
+            <img
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
+              alt="Elona Renaux — Fondatrice du studio ELONA"
+              loading="lazy" width="800" height="600"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section--white" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="label">Ce que nous faisons</span>
+          <h2 id="services-title">Expertises Solutions</h2>
+        </header>
+        <div class="services__grid">
+          <article class="service-card reveal reveal--d1">
+            <span class="service-card__num">01.</span>
+            <h3>Stratégie High-End</h3>
+            <p>Audit de positionnement et roadmap stratégique pour marques en quête d'autorité. Analyse concurrentielle, définition des piliers éditoriaux et plan d'action sur 6 mois.</p>
+            <span class="service-card__del">Livrable : Strategy Book</span>
+          </article>
+          <article class="service-card reveal reveal--d2">
+            <span class="service-card__num">02.</span>
+            <h3>Contenu Éditorial</h3>
+            <p>Direction artistique et production de contenus visuels alignés sur les codes du luxe. Des assets cohérents, distinctifs et adaptés à chaque plateforme.</p>
+            <span class="service-card__del">Livrable : Master d'assets</span>
+          </article>
+          <article class="service-card reveal reveal--d3">
+            <span class="service-card__num">03.</span>
+            <h3>Performance Data</h3>
+            <p>Analyse des conversions et monitoring ROI pour garantir une croissance saine. Dashboard dédié, reporting hebdomadaire et ajustements continus.</p>
+            <span class="service-card__del">Livrable : Dashboard Live</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="label">Notre méthode</span>
+          <h2 id="process-title">Comment nous travaillons</h2>
+        </header>
+        <div class="process__grid">
+          <article class="process__step reveal reveal--d1">
+            <div class="process__num">01</div>
+            <h3>Diagnostic</h3>
+            <p>Audit complet de votre présence digitale, analyse concurrentielle et identification des axes de différenciation.</p>
+          </article>
+          <article class="process__step reveal reveal--d2">
+            <div class="process__num">02</div>
+            <h3>Stratégie</h3>
+            <p>Élaboration d'une roadmap sur-mesure avec KPIs définis, planning éditorial et direction artistique.</p>
+          </article>
+          <article class="process__step reveal reveal--d3">
+            <div class="process__num">03</div>
+            <h3>Production</h3>
+            <p>Création de contenus premium alignés sur vos codes de marque et adaptés à chaque plateforme.</p>
+          </article>
+          <article class="process__step reveal reveal--d4">
+            <div class="process__num">04</div>
+            <h3>Optimisation</h3>
+            <p>Suivi des performances en temps réel, analyse des données et ajustements continus pour maximiser le ROI.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="section section--white" id="clients" aria-label="Nos clients">
+      <div class="container clients__inner reveal">
+        <span class="label">Ils nous font confiance</span>
+      </div>
+      <div class="clients__track-wrapper" aria-hidden="true">
+        <div class="clients__track">
+          <img src="images/rungis.png"  alt="Rungis"  class="clients__logo" loading="lazy">
+          <img src="images/beem.png"    alt="Beem"    class="clients__logo" loading="lazy">
+          <img src="images/ackling.png" alt="Ackling" class="clients__logo" loading="lazy">
+          <img src="images/rungis.png"  alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/beem.png"    alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/ackling.png" alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/rungis.png"  alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/beem.png"    alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/ackling.png" alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+        </div>
+      </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="section section--accent" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="label" style="color:rgba(241,239,231,0.5)">Ce qu'ils disent</span>
+          <h2 id="testimonials-title" style="color:var(--bg)">Témoignages</h2>
+        </header>
+
+        <div class="testimonials__carousel reveal" id="testimonials-carousel" role="region" aria-label="Témoignages clients">
+          <div class="testimonials__track" id="testimonials-track">
+            <article class="testimonial-slide" aria-label="Témoignage 1 sur 3">
+              <img src="images/xavier.jpg" alt="Xavier Letzelter" class="testimonial__photo" loading="lazy" width="80" height="80">
+              <blockquote class="testimonial__quote">« Je ne peux que recommander Elona pour toute opportunité future dans le domaine du marketing digital. Elle apportera, sans aucun doute, une réelle valeur à toute structure qui lui fera confiance. »</blockquote>
+              <small class="testimonial__author">Xavier Letzelter</small>
+              <span class="testimonial__company">General Manager · Rungis</span>
+            </article>
+            <article class="testimonial-slide" aria-label="Témoignage 2 sur 3">
+              <img src="images/aimee.jpg" alt="Aimee Bergeret" class="testimonial__photo" loading="lazy" width="80" height="80">
+              <blockquote class="testimonial__quote">« Elona a contribué à l'essor de notre marque, notamment sur les réseaux sociaux et en nous faisant connaître auprès des influenceurs. Organisée, avec une bonne compréhension des enjeux de l'entreprise, elle est toujours investie. »</blockquote>
+              <small class="testimonial__author">Aimee Bergeret</small>
+              <span class="testimonial__company">Head of Brand Marketing · Beem</span>
+            </article>
+            <article class="testimonial-slide" aria-label="Témoignage 3 sur 3">
+              <img src="images/lino.jpg" alt="Lino Fillaudeau" class="testimonial__photo" loading="lazy" width="80" height="80">
+              <blockquote class="testimonial__quote">« Elle a exercé ses fonctions avec enthousiasme et professionnalisme et était particulièrement appréciée par ses collègues pour son anticipation et ses prises d'initiatives. »</blockquote>
+              <small class="testimonial__author">Lino Fillaudeau</small>
+              <span class="testimonial__company">Country Manager France · Ackling</span>
+            </article>
+          </div>
+        </div>
+
+        <nav class="testimonials__nav reveal" aria-label="Navigation témoignages">
+          <button class="testimonials__arrow" id="testi-prev" aria-label="Témoignage précédent"><i class="fas fa-arrow-left" aria-hidden="true"></i></button>
+          <div class="testimonials__dots">
+            <button class="testimonials__dot active" data-index="0" aria-label="Témoignage 1" aria-current="true"></button>
+            <button class="testimonials__dot"        data-index="1" aria-label="Témoignage 2"></button>
+            <button class="testimonials__dot"        data-index="2" aria-label="Témoignage 3"></button>
+          </div>
+          <button class="testimonials__arrow" id="testi-next" aria-label="Témoignage suivant"><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+        </nav>
+      </div>
+    </section>
+
+    <!-- TARIFS -->
+    <section class="section section--white" id="tarifs" aria-labelledby="tarifs-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="label">Investissement</span>
+          <h2 id="tarifs-title">Nos offres</h2>
+        </header>
+
+        <div class="pricing__tabs reveal" role="tablist" aria-label="Catégories de tarifs">
+          <button class="pricing__tab active" data-tab="social" role="tab" aria-selected="true">Social Media</button>
+          <button class="pricing__tab"        data-tab="brand"  role="tab" aria-selected="false">Branding</button>
+          <button class="pricing__tab"        data-tab="strat"  role="tab" aria-selected="false">Stratégie</button>
+        </div>
+
+        <!-- Social Media -->
+        <div class="pricing__panel active" data-panel="social" role="tabpanel">
+          <div class="pricing-card">
+            <p class="pricing-card__name">Starter</p>
+            <p class="pricing-card__price"><sup>€</sup>490</p>
+            <p class="pricing-card__freq">/ mois</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Audit de compte</li><li>12 publications / mois</li>
+              <li>Copywriting inclus</li><li>Rapport mensuel</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Démarrer</a>
+          </div>
+          <div class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">Recommandé</span>
+            <p class="pricing-card__name">Growth</p>
+            <p class="pricing-card__price"><sup>€</sup>890</p>
+            <p class="pricing-card__freq">/ mois</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Stratégie éditoriale</li><li>20 publications / mois</li>
+              <li>Stories + Reels</li><li>Gestion des DM</li><li>Rapport hebdomadaire</li>
+            </ul>
+            <a href="#contact" class="btn">Démarrer</a>
+          </div>
+          <div class="pricing-card">
+            <p class="pricing-card__name">Premium</p>
+            <p class="pricing-card__price"><sup>€</sup>1 490</p>
+            <p class="pricing-card__freq">/ mois</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Stratégie multi-plateforme</li><li>Publications illimitées</li>
+              <li>Direction artistique</li><li>Influence outreach</li>
+              <li>Dashboard live dédié</li><li>Call hebdo</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Démarrer</a>
+          </div>
+        </div>
+
+        <!-- Branding -->
+        <div class="pricing__panel" data-panel="brand" role="tabpanel">
+          <div class="pricing-card">
+            <p class="pricing-card__name">Identité</p>
+            <p class="pricing-card__price"><sup>€</sup>990</p>
+            <p class="pricing-card__freq">projet unique</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Moodboard & univers</li><li>Charte graphique</li><li>Kit réseaux sociaux</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Démarrer</a>
+          </div>
+          <div class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">Recommandé</span>
+            <p class="pricing-card__name">Éditorial</p>
+            <p class="pricing-card__price"><sup>€</sup>2 200</p>
+            <p class="pricing-card__freq">projet unique</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Identité complète</li><li>Direction artistique</li>
+              <li>Templates contenus</li><li>Brand book livré</li>
+            </ul>
+            <a href="#contact" class="btn">Démarrer</a>
+          </div>
+          <div class="pricing-card">
+            <p class="pricing-card__name">Sur-mesure</p>
+            <p class="pricing-card__price">Sur devis</p>
+            <p class="pricing-card__freq">&nbsp;</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Accompagnement complet</li><li>Shooting inclus</li>
+              <li>Refonte totale</li><li>Suivi 3 mois</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Nous contacter</a>
+          </div>
+        </div>
+
+        <!-- Stratégie -->
+        <div class="pricing__panel" data-panel="strat" role="tabpanel">
+          <div class="pricing-card">
+            <p class="pricing-card__name">Audit Flash</p>
+            <p class="pricing-card__price"><sup>€</sup>390</p>
+            <p class="pricing-card__freq">prestation unique</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Analyse de présence</li><li>Rapport d'opportunités</li><li>Call de restitution 1h</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Démarrer</a>
+          </div>
+          <div class="pricing-card pricing-card--featured">
+            <span class="pricing-card__badge">Recommandé</span>
+            <p class="pricing-card__name">Strategy Book</p>
+            <p class="pricing-card__price"><sup>€</sup>1 200</p>
+            <p class="pricing-card__freq">prestation unique</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Audit complet</li><li>Roadmap 6 mois</li>
+              <li>KPIs & reporting</li><li>2 sessions de travail</li>
+            </ul>
+            <a href="#contact" class="btn">Démarrer</a>
+          </div>
+          <div class="pricing-card">
+            <p class="pricing-card__name">Retainer</p>
+            <p class="pricing-card__price"><sup>€</sup>700</p>
+            <p class="pricing-card__freq">/ mois</p>
+            <div class="pricing-card__hr"></div>
+            <ul class="pricing-card__features">
+              <li>Conseil mensuel continu</li><li>Suivi des KPIs</li>
+              <li>Ajustements stratégiques</li><li>Appel hebdo 30 min</li>
+            </ul>
+            <a href="#contact" class="btn btn--ghost">Démarrer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section__header reveal">
+          <span class="label">Travaillons ensemble</span>
+          <h2 id="contact-title">Contact</h2>
+        </header>
+        <p class="contact__intro reveal">Disponible pour de nouvelles collaborations sélectives.</p>
+
+        <form class="contact__form reveal" id="contact-form" novalidate aria-label="Formulaire de contact">
+          <div class="form-group">
+            <input type="text" id="f-name" name="name" placeholder=" " required autocomplete="name">
+            <label for="f-name">Nom complet</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="f-email" name="email" placeholder=" " required autocomplete="email">
+            <label for="f-email">Adresse email</label>
+          </div>
+          <div class="form-group has-textarea">
+            <textarea id="f-msg" name="message" placeholder=" " required></textarea>
+            <label for="f-msg">Votre message</label>
+          </div>
+          <button type="submit" class="btn btn--full">
+            Envoyer la demande
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <div class="form-success" id="form-success" role="alert" aria-live="polite">
+          <div class="form-success__icon"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
+          <h3>Message envoyé !</h3>
+          <p>Merci pour votre message. Nous reviendrons vers vous dans les 48h.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <h4>ELONA Studio</h4>
+        <p class="footer__tagline">Architecte d'image digitale.</p>
+        <p>Paris · International</p>
+        <a href="mailto:contact@elona.studio">contact@elona.studio</a>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/adressessecretes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/elona-renaux/"   target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"  aria-hidden="true"></i></a>
+          <a href="https://www.tiktok.com/@adressessecretes"    target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"   aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Pages</h4>
+        <a href="index.html">Accueil</a>
+        <a href="studio.html">Studio</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="#tarifs">Tarifs</a>
+      </div>
+      <div class="footer__col">
+        <h4>Expertises</h4>
+        <a href="#services">Social Media Strategy</a>
+        <a href="#services">Branding Éditorial</a>
+        <a href="#services">Performance Data</a>
+        <a href="#services">Direction Artistique</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="mailto:contact@elona.studio">contact@elona.studio</a>
+        <a href="https://www.linkedin.com/in/elona-renaux/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#contact">Formulaire</a>
+      </div>
+    </div>
+    <p class="footer__bottom">© <span class="footer-year"></span> ELONA Studio. Tous droits réservés.</p>
+  </footer>
+
+  <script src="shared.js"></script>
+  <script>
+    'use strict';
+    /* Pricing tabs */
+    document.querySelectorAll('.pricing__tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const key = tab.dataset.tab;
+        document.querySelectorAll('.pricing__tab').forEach(t => {
+          t.classList.toggle('active', t === tab);
+          t.setAttribute('aria-selected', String(t === tab));
+        });
+        document.querySelectorAll('.pricing__panel').forEach(p => {
+          p.classList.toggle('active', p.dataset.panel === key);
+        });
+      });
+    });
+
+    /* Contact form */
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    if (form && success) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        let valid = true;
+        form.querySelectorAll('[required]').forEach(f => {
+          if (!f.value.trim()) {
+            valid = false;
+            f.style.borderColor = '#c0392b';
+            f.addEventListener('input', () => f.style.borderColor = '', { once: true });
+          }
+        });
+        if (!valid) return;
+        const btn = form.querySelector('[type="submit"]');
+        btn.textContent = 'Envoi en cours…'; btn.disabled = true;
+        setTimeout(() => {
+          form.style.display = 'none';
+          success.classList.add('visible');
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+</html>

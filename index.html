@@ -7,15 +7,6 @@
   <meta name="description" content="ELONA est un studio de stratégie digitale spécialisé dans les marques lifestyle et premium. Storytelling de luxe, performance mesurable, branding éditorial.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1612D3">
-  <meta property="og:title" content="ELONA Studio — Stratégie Digitale Premium">
-  <meta property="og:description" content="Architecte d'image digitale. Écosystèmes où le storytelling de luxe rencontre la performance mesurable.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://elona.studio">
-  <meta property="og:image" content="https://elona.studio/og-image.jpg">
-  <meta property="og:locale" content="fr_FR">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ELONA Studio — Stratégie Digitale Premium">
-  <meta name="twitter:description" content="Architecte d'image digitale. Écosystèmes où le storytelling de luxe rencontre la performance mesurable.">
 
   <script type="application/ld+json">
   {
@@ -35,768 +26,127 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif'>E</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="shared.css">
 
   <style>
-    /* ================================================
-       1. DESIGN TOKENS
-    ================================================ */
-    :root {
-      --bg:           #F1EFE7;
-      --text:         #1a1a1a;
-      --accent:       #1612D3;
-      --white:        #ffffff;
-      --border:       #d1cfc7;
-      --border-light: rgba(209, 207, 199, 0.5);
-      --font-serif:   'Playfair Display', Georgia, serif;
-      --font-sans:    'Montserrat', system-ui, sans-serif;
-      --radius-md:    20px;
-      --radius-lg:    30px;
-      --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
-      --transition:   0.4s var(--ease-out);
-      --shadow-sm:    0 2px 12px rgba(22, 18, 211, 0.06);
-      --shadow-md:    0 8px 40px rgba(22, 18, 211, 0.12);
-      --shadow-lg:    0 20px 80px rgba(22, 18, 211, 0.18);
-    }
+    /* ── INDEX-SPECIFIC ── */
 
-    /* ================================================
-       2. RESET & BASE
-    ================================================ */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    body {
-      font-family: var(--font-sans);
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    img { display: block; max-width: 100%; }
-
-    /* ================================================
-       3. TYPOGRAPHIE
-    ================================================ */
-    h1, h2, h3 {
-      font-family: var(--font-serif);
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 1;
-    }
-    h1 { font-size: clamp(40px, 7vw, 78px); color: var(--accent); }
-    h2 { font-size: clamp(28px, 4vw, 48px); }
-    h3 { font-size: clamp(18px, 2.2vw, 24px); text-transform: none; line-height: 1.25; }
-    p  { line-height: 1.75; }
-
-    .label {
-      display: block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--accent);
-    }
-
-    /* ================================================
-       4. LAYOUT
-    ================================================ */
-    /* Règle unique padding — appliquée via une variable */
-    .section {
-      padding: 130px 7%;
-      border-bottom: 1px solid var(--border-light);
-      position: relative;
-      overflow: hidden;
-    }
-    .section--white  { background: var(--white); }
-    .section--accent { background: var(--accent); color: var(--bg); border-bottom: none; }
-
-    .container {
-      max-width: 1180px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .section__header {
-      text-align: center;
-      margin-bottom: 70px;
-    }
-    .section__header .label { margin-bottom: 14px; }
-
-    /* ================================================
-       5. ANIMATIONS
-    ================================================ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(34px);
-      transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out);
-    }
-    .reveal.active       { opacity: 1; transform: translateY(0); }
-    .reveal--d1          { transition-delay: 0.10s; }
-    .reveal--d2          { transition-delay: 0.20s; }
-    .reveal--d3          { transition-delay: 0.30s; }
-    .reveal--d4          { transition-delay: 0.40s; }
-
-    @keyframes fadeIn  { from { opacity: 0 } to { opacity: 1 } }
-    @keyframes slideUp { from { opacity: 0; transform: translateY(18px) } to { opacity: 1; transform: none } }
-
-    /* ================================================
-       6. BOUTONS
-    ================================================ */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 40px;
-      font-family: var(--font-sans);
-      font-size: 11px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-decoration: none;
-      border-radius: 50px;
-      border: 1.5px solid var(--accent);
-      background: var(--accent);
-      color: var(--white);
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background var(--transition), color var(--transition),
-                  transform var(--transition), box-shadow var(--transition),
-                  border-color var(--transition);
-    }
-    .btn:hover  { background: var(--text); border-color: var(--text); transform: translateY(-3px); box-shadow: var(--shadow-md); }
-    .btn:active { transform: translateY(-1px); }
-    .btn--ghost { background: transparent; color: var(--accent); }
-    .btn--ghost:hover { background: var(--accent); color: var(--white); border-color: var(--accent); }
-    .btn--full  { width: 100%; }
-
-    /* ================================================
-       7. NAVIGATION
-    ================================================ */
-    .nav {
-      position: fixed;
-      inset: 0 0 auto;
-      padding: 20px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(241, 239, 231, 0.92);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      z-index: 2000;
-      border-bottom: 1px solid var(--border-light);
-      transition: padding var(--transition), box-shadow var(--transition);
-    }
-    .nav.scrolled { padding-block: 13px; box-shadow: var(--shadow-sm); }
-
-    .nav__logo {
-      font-family: var(--font-serif);
-      font-size: 21px;
-      font-weight: 700;
-      letter-spacing: 5px;
-      text-decoration: none;
-      text-transform: uppercase;
-      color: var(--accent);
-      transition: letter-spacing var(--transition), opacity var(--transition);
-    }
-    .nav__logo:hover { letter-spacing: 7px; opacity: 0.75; }
-
-    .nav__list {
-      display: flex;
-      align-items: center;
-      gap: 32px;
-      list-style: none;
-    }
-    .nav__list a {
-      text-decoration: none;
-      color: var(--text);
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-      transition: color 0.3s;
-    }
-    .nav__list a::after {
-      content: '';
-      position: absolute;
-      bottom: -3px; left: 0;
-      width: 0; height: 1px;
-      background: var(--accent);
-      transition: width 0.4s var(--ease-out);
-    }
-    .nav__list a:hover           { color: var(--accent); }
-    .nav__list a:hover::after    { width: 100%; }
-
-    .nav__burger {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--accent);
-      font-size: 20px;
-      min-width: 44px;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* ================================================
-       8. HERO
-    ================================================ */
-    #home {
-      min-height: 100svh;
-      display: flex;
-      align-items: center;
-      padding-top: 130px;
-    }
+    /* Hero */
+    #home { min-height: 100svh; display: flex; align-items: center; padding-top: 130px; }
     .hero__bg-text {
-      position: absolute;
-      top: 8%; left: 3%;
-      font-family: var(--font-serif);
-      font-size: clamp(70px, 18vw, 260px);
-      -webkit-text-stroke: 1px rgba(22, 18, 211, 0.07);
-      color: transparent;
-      text-transform: uppercase;
-      z-index: 0;
-      user-select: none;
-      pointer-events: none;
-      animation: hero-drift 14s ease-in-out infinite alternate;
+      position: absolute; top: 6%; left: 2%;
+      font-family: var(--font-serif); font-size: clamp(80px, 20vw, 280px);
+      -webkit-text-stroke: 1px rgba(22,18,211,0.06); color: transparent;
+      text-transform: uppercase; user-select: none; pointer-events: none;
+      animation: hero-drift 16s ease-in-out infinite alternate;
     }
-    @keyframes hero-drift {
-      from { transform: translateX(0) }
-      to   { transform: translateX(-16px) }
-    }
+    @keyframes hero-drift { from { transform: translateX(0) } to { transform: translateX(-18px) } }
+    .hero__container { max-width: 1180px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+    .hero__content { max-width: 860px; }
+    .hero__content .label { margin-bottom: 22px; }
+    .hero__title { margin-bottom: 26px; font-style: italic; }
+    .hero__desc { max-width: 580px; font-size: 16px; margin-bottom: 44px; opacity: 0.8; }
+    .hero__cta { display: flex; gap: 14px; flex-wrap: wrap; }
 
-    /* Aligne le hero sur la même grille que toutes les autres sections */
-    .hero__container {
-      max-width: 1180px;
-      margin: 0 auto;
-      width: 100%;
-      position: relative;
-      z-index: 1;
-    }
-    .hero__content {
-      max-width: 840px;
-    }
-    .hero__content .label { margin-bottom: 20px; }
-    .hero__title          { margin-bottom: 28px; font-style: italic; }
-    .hero__desc           { max-width: 590px; font-size: 17px; margin-bottom: 42px; opacity: 0.85; }
-    .hero__cta            { display: flex; gap: 14px; flex-wrap: wrap; }
-
-    /* Indicateur scroll — masqué sur desktop, visible sur mobile via media query */
-    .hero__scroll-hint { display: none; }
-
-    /* ================================================
-       9. STATS
-    ================================================ */
-    .stats__grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      text-align: center;
-      align-items: start;
-    }
+    /* Stats */
+    .stats__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; text-align: center; }
     .stats__item { position: relative; }
-    .stats__item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      top: 10%; right: 0;
-      height: 80%; width: 1px;
-      background: var(--border);
-    }
-    .stats__number {
-      font-family: var(--font-serif);
-      font-size: clamp(36px, 5vw, 54px);
-      font-weight: 700;
-      color: var(--accent);
-      display: block;
-      margin-bottom: 10px;
-      line-height: 1;
-    }
-    .stats__name   { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 8px; }
-    .stats__detail { font-size: 12px; opacity: 0.55; }
+    .stats__item:not(:last-child)::after { content: ''; position: absolute; top: 10%; right: 0; height: 80%; width: 1px; background: var(--border); }
+    .stats__number { font-family: var(--font-serif); font-size: clamp(38px,5vw,56px); font-weight: 700; color: var(--accent); display: block; margin-bottom: 10px; line-height: 1; }
+    .stats__name { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 6px; }
+    .stats__detail { font-size: 11px; opacity: 0.5; }
 
-    /* ================================================
-       10. ABOUT
-    ================================================ */
-    .about__grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 76px;
-      align-items: center;
-    }
-    .about__text h2 { text-align: left; margin-bottom: 22px; }
-    .about__text p  { opacity: 0.8; margin-bottom: 14px; }
-    .about__tags    { display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0 28px; }
-    .about__tag {
-      font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
-      text-transform: uppercase; padding: 8px 16px;
-      border: 1px solid var(--border); border-radius: 50px;
-      color: var(--accent); background: rgba(22, 18, 211, 0.04);
-      transition: background var(--transition), border-color var(--transition), color var(--transition);
-    }
-    .about__tag:hover { background: var(--accent); color: var(--white); border-color: var(--accent); }
+    /* About snippet */
+    .about__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about__text h2 { text-align: left; margin-bottom: 20px; }
+    .about__text p { opacity: 0.75; margin-bottom: 14px; font-size: 15px; }
+    .about__cta { margin-top: 30px; }
+    .about__visual { border-radius: var(--radius-lg); overflow: hidden; filter: grayscale(1); box-shadow: var(--shadow-md); transition: filter 0.9s var(--ease-out); }
+    .about__visual:hover { filter: grayscale(0); }
+    .about__visual img { width: 100%; transition: transform 0.9s var(--ease-out); }
+    .about__visual:hover img { transform: scale(1.04); }
 
-    .about__visual {
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      filter: grayscale(1);
-      box-shadow: var(--shadow-md);
-      transition: filter 0.8s var(--ease-out);
-      cursor: pointer;
-    }
-    .about__visual:hover       { filter: grayscale(0); }
-    .about__visual img         { width: 100%; transition: transform 0.8s var(--ease-out); }
-    .about__visual:hover img   { transform: scale(1.04); }
-
-    /* ================================================
-       11. SERVICES
-    ================================================ */
-    .services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-
-    .service-card {
-      padding: 46px 30px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.5);
-      border-radius: var(--radius-md);
-      position: relative;
-      overflow: hidden;
-      transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
-    }
-    .service-card::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: var(--accent);
-      transform: translateY(101%);
-      transition: transform 0.55s var(--ease-out);
-      z-index: 0;
-    }
+    /* Services */
+    .services__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .service-card { padding: 44px 28px; border: 1px solid var(--border); background: rgba(255,255,255,0.5); border-radius: var(--radius-md); position: relative; overflow: hidden; transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition); }
+    .service-card::before { content: ''; position: absolute; inset: 0; background: var(--accent); transform: translateY(101%); transition: transform 0.55s var(--ease-out); z-index: 0; }
     .service-card:hover::before { transform: translateY(0); }
-    .service-card:hover         { box-shadow: var(--shadow-lg); transform: translateY(-5px); border-color: var(--accent); }
-    .service-card > *           { position: relative; z-index: 1; }
-
-    .service-card__num { font-size: 12px; color: var(--accent); font-weight: 700; transition: color 0.4s; }
-    .service-card h3   { margin: 15px 0 12px; transition: color 0.4s; }
-    .service-card p    { font-size: 14px; opacity: 0.75; margin-bottom: 20px; transition: color 0.4s, opacity 0.4s; }
-    .service-card__del { font-size: 11px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.4s; }
-
+    .service-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-6px); border-color: var(--accent); }
+    .service-card > * { position: relative; z-index: 1; }
+    .service-card__num { font-size: 11px; color: var(--accent); font-weight: 700; transition: color 0.4s; }
+    .service-card h3 { margin: 14px 0 10px; transition: color 0.4s; }
+    .service-card p { font-size: 13px; opacity: 0.7; margin-bottom: 18px; transition: color 0.4s, opacity 0.4s; }
+    .service-card__del { font-size: 10px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; transition: color 0.4s; }
     .service-card:hover .service-card__num,
     .service-card:hover h3,
     .service-card:hover p,
     .service-card:hover .service-card__del { color: var(--white); opacity: 1; }
 
-    /* ================================================
-       12. PROCESS
-    ================================================ */
-    .process__grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      position: relative;
-    }
-    .process__grid::before {
-      content: '';
-      position: absolute;
-      top: 34px;
-      left: calc(12.5% + 35px);
-      right: calc(12.5% + 35px);
-      height: 1px;
-      background: linear-gradient(90deg, var(--accent), rgba(22,18,211,0.06));
-      z-index: 0;
-    }
-    .process__step {
-      padding-right: 26px;
-      position: relative; z-index: 1;
-      transition: transform var(--transition);
-    }
-    .process__step:hover { transform: translateY(-5px); }
-    .process__num {
-      width: 68px; height: 68px; border-radius: 50%;
-      background: var(--bg); border: 1.5px solid var(--accent);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-serif); font-size: 19px; color: var(--accent);
-      margin-bottom: 24px;
-      transition: background var(--transition), color var(--transition);
-    }
-    .process__step:hover .process__num { background: var(--accent); color: var(--white); }
-    .process__step h3 { font-size: 16px; margin-bottom: 10px; text-transform: none; }
-    .process__step p  { font-size: 13px; opacity: 0.7; line-height: 1.6; }
+    /* Projets phares */
+    .projects__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .project-card { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); position: relative; aspect-ratio: 3/4; transition: transform var(--transition), box-shadow var(--transition); }
+    .project-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .project-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease-out), filter 0.5s; }
+    .project-card:hover img { transform: scale(1.07); filter: brightness(0.65); }
+    .project-card__bar { position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 22px; background: linear-gradient(to top, rgba(0,0,0,0.55), transparent); }
+    .project-card__bar-label { display: block; font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+    .project-card__bar-title { font-size: 15px; font-family: var(--font-serif); font-style: italic; color: var(--white); line-height: 1.2; }
+    .project-card__overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(22,18,211,0.88) 0%, transparent 55%); opacity: 0; display: flex; align-items: flex-end; padding: 28px; transition: opacity 0.4s var(--ease-out); }
+    .project-card:hover .project-card__overlay { opacity: 1; }
+    .project-card__label { display: block; font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: rgba(255,255,255,0.65); margin-bottom: 5px; }
+    .project-card__title { font-size: 17px; font-family: var(--font-serif); font-style: italic; color: var(--white); line-height: 1.2; }
+    .projects__cta { text-align: center; margin-top: 48px; }
 
-    /* ================================================
-       13. PORTFOLIO SLIDER
-    ================================================ */
-    .slider-wrapper {
-      width: 100%; overflow-x: auto; padding-bottom: 18px; cursor: grab;
-      scrollbar-width: thin; scrollbar-color: var(--accent) var(--border);
-    }
-    .slider-wrapper:active { cursor: grabbing; }
-    .slider-wrapper::-webkit-scrollbar       { height: 3px; }
-    .slider-wrapper::-webkit-scrollbar-track { background: var(--border); border-radius: 3px; }
-    .slider-wrapper::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+    /* CTA Strip */
+    .cta-strip { padding: 110px 7%; background: var(--text); color: var(--white); text-align: center; }
+    .cta-strip h2 { color: var(--white); margin-bottom: 16px; }
+    .cta-strip p { opacity: 0.6; max-width: 500px; margin: 0 auto 40px; font-size: 15px; }
+    .cta-strip .btn-group { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
 
-    .slider-track { display: inline-flex; gap: 20px; user-select: none; }
-
-    .slide {
-      flex: 0 0 348px; height: 450px;
-      border-radius: var(--radius-lg); overflow: hidden;
-      border: 1px solid var(--border); position: relative;
-      transition: transform var(--transition), box-shadow var(--transition);
-    }
-    .slide:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); }
-    .slide img {
-      width: 100%; height: 100%; object-fit: cover;
-      transition: transform 0.7s var(--ease-out), filter 0.5s;
-    }
-    .slide:hover img { transform: scale(1.06); filter: brightness(0.72); }
-
-    .slide__overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(22,18,211,0.88) 0%, transparent 52%);
-      opacity: 0; display: flex; align-items: flex-end; padding: 28px;
-      transition: opacity 0.42s var(--ease-out);
-    }
-    .slide:hover .slide__overlay { opacity: 1; }
-    .slide__label {
-      display: block; font-size: 10px; letter-spacing: 2px;
-      text-transform: uppercase; font-weight: 600;
-      color: rgba(255,255,255,0.7); margin-bottom: 5px;
-    }
-    .slide__title {
-      font-size: 16px; font-family: var(--font-serif);
-      font-style: italic; color: var(--white); line-height: 1.2;
-    }
-
-    /* ================================================
-       14. CLIENTS
-    ================================================ */
-    #clients { overflow: hidden; }
-    .clients__inner { text-align: center; margin-bottom: 42px; }
-
-    .clients__track-wrapper { overflow: hidden; position: relative; }
-    .clients__track-wrapper::before,
-    .clients__track-wrapper::after {
-      content: ''; position: absolute; inset-block: 0; width: 100px; z-index: 2;
-    }
-    .clients__track-wrapper::before { left: 0;  background: linear-gradient(to right, var(--bg), transparent); }
-    .clients__track-wrapper::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
-
-    .clients__track {
-      display: flex; gap: 64px; width: max-content;
-      animation: clients-scroll 22s linear infinite;
-    }
-    .clients__track:hover { animation-play-state: paused; }
-    @keyframes clients-scroll {
-      from { transform: translateX(0) }
-      to   { transform: translateX(-50%) }
-    }
-    .clients__logo {
-      height: 34px; width: auto; object-fit: contain;
-      filter: grayscale(1) opacity(0.4); transition: filter 0.4s;
-    }
-    .clients__logo:hover { filter: grayscale(0) opacity(1); }
-
-    /* ================================================
-       15. TÉMOIGNAGES
-    ================================================ */
-    .testimonial {
-      display: none; max-width: 800px;
-      margin: 0 auto; text-align: center;
-      animation: fadeIn 0.7s var(--ease-out);
-    }
-    .testimonial.active { display: block; }
-    .testimonial__photo {
-      width: 76px; height: 76px; border-radius: 50%; object-fit: cover;
-      border: 2px solid rgba(241,239,231,0.4); margin: 0 auto 24px;
-    }
-    .testimonial__quote {
-      font-size: clamp(15px, 2vw, 18px); font-family: var(--font-serif);
-      font-style: italic; line-height: 1.75; opacity: 0.92;
-    }
-    .testimonial__author {
-      display: block; margin-top: 24px; font-size: 11px;
-      text-transform: uppercase; letter-spacing: 2.5px; font-weight: 600; opacity: 0.68;
-    }
-    .testimonial__logo {
-      display: block; margin: 20px auto 0; height: 38px; width: auto; object-fit: contain;
-      filter: grayscale(1) brightness(10) opacity(0.45); transition: filter 0.3s;
-    }
-    .testimonial__logo:hover { filter: grayscale(1) brightness(10) opacity(0.85); }
-
-    .testimonial__dots { display: flex; justify-content: center; gap: 10px; margin-top: 46px; }
-    .testimonial__dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: rgba(241,239,231,0.3); border: none; cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .testimonial__dot.active { background: var(--bg); transform: scale(1.35); }
-
-    /* ================================================
-       16. TARIFS (dynamique par onglets)
-       Pour ajouter une catégorie :
-         1. <button data-tab="xxx"> dans .pricing__tabs
-         2. <div class="pricing__panel" data-panel="xxx"> avec les cartes
-    ================================================ */
-    .pricing__tabs {
-      display: flex; justify-content: center; gap: 0;
-      margin: 0 auto 60px;
-      width: fit-content;
-      border: 1.5px solid var(--border); border-radius: 50px; padding: 5px;
-    }
-    .pricing__tab {
-      padding: 12px 30px;
-      font-family: var(--font-sans); font-size: 11px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 2px;
-      border: none; border-radius: 50px;
-      background: transparent; color: var(--text);
-      cursor: pointer; opacity: 0.5;
-      transition: background var(--transition), color var(--transition), opacity 0.3s;
-    }
-    .pricing__tab.active    { background: var(--accent); color: var(--white); opacity: 1; }
-    .pricing__tab:hover:not(.active) { opacity: 0.9; }
-
-    .pricing__panel {
-      display: none;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      animation: slideUp 0.42s var(--ease-out);
-    }
-    .pricing__panel.active { display: grid; }
-
-    .pricing-card {
-      border: 1px solid var(--border); border-radius: var(--radius-md);
-      padding: 42px 30px;
-      background: rgba(241,239,231,0.35);
-      position: relative; display: flex; flex-direction: column;
-      transition: box-shadow var(--transition), transform var(--transition);
-    }
-    .pricing-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-    .pricing-card--featured { border-color: var(--accent); background: var(--white); }
-
-    .pricing-card__badge {
-      display: none; position: absolute;
-      top: -13px; left: 50%; transform: translateX(-50%);
-      background: var(--accent); color: var(--white);
-      font-size: 10px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 1.5px; padding: 5px 15px; border-radius: 50px; white-space: nowrap;
-    }
-    .pricing-card--featured .pricing-card__badge { display: block; }
-
-    .pricing-card__name  { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 14px; }
-    .pricing-card__price { font-family: var(--font-serif); font-size: clamp(32px, 4vw, 44px); font-weight: 700; color: var(--text); line-height: 1; margin-bottom: 5px; }
-    .pricing-card__price sup { font-size: 0.45em; vertical-align: top; margin-top: 8px; display: inline-block; }
-    .pricing-card__freq  { font-size: 12px; opacity: 0.48; margin-bottom: 26px; }
-    .pricing-card__hr    { height: 1px; background: var(--border); margin-bottom: 26px; }
-    .pricing-card__features { list-style: none; flex: 1; margin-bottom: 30px; }
-    .pricing-card__features li {
-      font-size: 13px; opacity: 0.78; padding: 8px 0;
-      border-bottom: 1px solid var(--border-light);
-      display: flex; align-items: center; gap: 10px;
-    }
-    .pricing-card__features li:last-child { border-bottom: none; }
-    .pricing-card__features li::before { content: '—'; color: var(--accent); font-weight: 700; flex-shrink: 0; }
-
-    /* ================================================
-       17. CONTACT
-    ================================================ */
-    .contact__intro { text-align: center; opacity: 0.7; max-width: 460px; margin: 0 auto 50px; }
-    .contact__form  { max-width: 570px; margin: 0 auto; }
-
-    .form-group { position: relative; margin-bottom: 20px; }
-    .form-group input,
-    .form-group textarea {
-      width: 100%; padding: 22px 22px 8px;
-      border: 1.5px solid var(--border); background: var(--white);
-      border-radius: var(--radius-md); outline: none;
-      font-family: var(--font-sans); font-size: 15px; color: var(--text);
-      transition: border-color 0.3s, box-shadow 0.3s;
-    }
-    .form-group textarea { height: 155px; resize: none; padding-top: 28px; }
-
-    .form-group label {
-      position: absolute; left: 22px; top: 50%; transform: translateY(-50%);
-      font-size: 13px; color: rgba(26,26,26,0.45);
-      pointer-events: none;
-      transition: top 0.22s, font-size 0.22s, color 0.22s, transform 0.22s;
-    }
-    .form-group.has-textarea label { top: 22px; transform: none; }
-
-    .form-group input:focus + label,
-    .form-group input:not(:placeholder-shown) + label,
-    .form-group textarea:focus + label,
-    .form-group textarea:not(:placeholder-shown) + label {
-      top: 8px; transform: none;
-      font-size: 10px; color: var(--accent);
-      font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(22,18,211,0.07); }
-
-    .form-success {
-      display: none; text-align: center; padding: 44px 32px;
-      background: rgba(22,18,211,0.04); border: 1px solid rgba(22,18,211,0.13);
-      border-radius: var(--radius-md); animation: fadeIn 0.6s var(--ease-out);
-      max-width: 570px; margin: 0 auto;
-    }
-    .form-success.visible { display: block; }
-    .form-success__icon  { font-size: 36px; color: var(--accent); margin-bottom: 14px; }
-    .form-success h3     { font-size: 21px; margin-bottom: 10px; text-transform: none; }
-    .form-success p      { opacity: 0.65; font-size: 14px; }
-
-    /* ================================================
-       18. FOOTER
-    ================================================ */
-    footer {
-      padding: 80px 7% 40px;
-      border-top: 1px solid var(--border-light);
-      background: var(--bg);
-    }
-    .footer__grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 48px; max-width: 1180px; margin: 0 auto 54px;
-    }
-    .footer__col h4 {
-      font-family: var(--font-sans); font-size: 11px; font-weight: 700;
-      letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px;
-    }
-    .footer__col a,
-    .footer__col p {
-      font-size: 14px; text-decoration: none; color: var(--text);
-      opacity: 0.58; display: block; margin-bottom: 10px;
-      transition: opacity 0.3s, color 0.3s;
-    }
-    .footer__col a:hover { opacity: 1; color: var(--accent); }
-
-    .footer__social { display: flex; gap: 12px; margin-top: 6px; }
-    .footer__social a {
-      width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center;
-      font-size: 17px; color: var(--accent); opacity: 0.6;
-      border: 1px solid var(--border); border-radius: 50%; margin-bottom: 0;
-      transition: opacity 0.3s, background 0.3s, border-color 0.3s, transform 0.3s, color 0.3s;
-    }
-    .footer__social a:hover { opacity: 1; background: var(--accent); color: var(--white); border-color: var(--accent); transform: translateY(-3px); }
-
-    .footer__bottom {
-      text-align: center; font-size: 12px; opacity: 0.38; letter-spacing: 1px;
-      max-width: 1180px; margin: 0 auto; padding-top: 28px; border-top: 1px solid var(--border-light);
-    }
-
-    /* ================================================
-       19. RESPONSIVE — Tablette (≤ 1024px)
-    ================================================ */
+    /* Responsive overrides */
     @media (max-width: 1024px) {
-      .services__grid { grid-template-columns: repeat(2, 1fr); }
-      .pricing__panel { grid-template-columns: repeat(2, 1fr); }
-      .process__grid  { grid-template-columns: repeat(2, 1fr); gap: 40px; }
-      .process__grid::before { display: none; }
-      .process__step  { padding-right: 0; }
+      .services__grid { grid-template-columns: repeat(2,1fr); }
     }
-
-    /* ================================================
-       20. RESPONSIVE — Mobile (≤ 768px)
-    ================================================ */
     @media (max-width: 768px) {
-      .section { padding: 88px 5%; }
-
-      /* Nav */
-      .nav          { padding-inline: 5%; }
-      .nav__list {
-        display: none; position: absolute; top: 100%; left: 0;
-        width: 100%; background: var(--bg); flex-direction: column;
-        gap: 0; padding: 18px 0; border-bottom: 1px solid var(--border);
-      }
-      .nav__list.open { display: flex; }
-      .nav__list a    { padding: 14px 6%; font-size: 14px; }
-      .nav__burger    { display: inline-flex; }
-
-      /* Hero */
-      #home { padding-top: 110px; min-height: 100svh; }
-      .hero__bg-text {
-        top: auto; bottom: 2%; left: -4%;
-        font-size: clamp(68px, 22vw, 110px);
-        opacity: 0.5; animation: none;
-      }
-
-      /* Indicateur scroll : visible uniquement ici */
-      .hero__scroll-hint {
-        display: flex; flex-direction: column; align-items: center; gap: 7px;
-        position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
-        font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
-        color: var(--text); opacity: 0.38;
-        animation: scroll-bounce 2.6s ease-in-out infinite;
-      }
-      @keyframes scroll-bounce {
-        0%,100% { transform: translateX(-50%) translateY(0) }
-        50%      { transform: translateX(-50%) translateY(7px) }
-      }
-
-      /* Grilles mono-colonne */
-      .stats__grid    { grid-template-columns: 1fr; gap: 34px; }
-      .stats__item::after { display: none; }
-      .about__grid    { grid-template-columns: 1fr; gap: 34px; }
+      #home { padding-top: 100px; }
+      .hero__bg-text { font-size: clamp(70px,24vw,120px); top: auto; bottom: 2%; opacity: 0.4; animation: none; }
+      .about__grid { grid-template-columns: 1fr; gap: 36px; }
       .about__text h2 { text-align: center; }
-      .about__tags    { justify-content: center; }
       .services__grid { grid-template-columns: 1fr; }
-      .process__grid  { grid-template-columns: 1fr; gap: 30px; }
-      .pricing__panel { grid-template-columns: 1fr; }
-      .footer__grid   { grid-template-columns: 1fr; gap: 30px; }
-
-      /* Onglets tarifs scrollables */
-      .pricing__tabs  { overflow-x: auto; width: 100%; justify-content: flex-start; }
-
-      .slide { flex: 0 0 275px; height: 365px; }
-    }
-
-    /* ================================================
-       21. Très petit mobile (≤ 480px)
-    ================================================ */
-    @media (max-width: 480px) {
-      .hero__cta { flex-direction: column; }
-      .btn       { width: 100%; }
+      .projects__grid { grid-template-columns: 1fr; }
+      .stats__grid { grid-template-columns: 1fr; gap: 32px; }
+      .stats__item::after { display: none; }
+      .hero__cta, .cta-strip .btn-group { flex-direction: column; }
     }
   </style>
 </head>
-
 <body>
 
-  <!-- ================================================
-       NAVIGATION
-  ================================================ -->
+  <!-- NAVIGATION -->
   <nav class="nav" role="navigation" aria-label="Navigation principale">
-    <a href="#home" class="nav__logo" aria-label="ELONA Studio — accueil">ELONA.</a>
-
+    <a href="index.html" class="nav__logo" aria-label="ELONA Studio — accueil">ELONA.</a>
     <button class="nav__burger" id="nav-burger" aria-expanded="false" aria-controls="nav-list" aria-label="Ouvrir le menu">
       <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
-
     <ul class="nav__list" id="nav-list" role="list">
-      <li><a href="#about">Studio</a></li>
-      <li><a href="#services">Expertises</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#projets">Portfolio</a></li>
-      <li><a href="#tarifs">Tarifs</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="studio.html">Studio</a></li>
+      <li><a href="studio.html#services">Expertises</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="studio.html#tarifs">Tarifs</a></li>
+      <li><a href="studio.html#contact" class="btn" style="padding:10px 24px;font-size:10px">Contact</a></li>
     </ul>
   </nav>
 
   <main>
 
-    <!-- ================================================
-         HERO
-    ================================================ -->
+    <!-- HERO -->
     <section class="section" id="home" aria-labelledby="hero-title">
       <span class="hero__bg-text" aria-hidden="true">Digital</span>
-
       <div class="hero__container">
         <div class="hero__content reveal">
-          <span class="label">Stratégie & Contenu</span>
+          <span class="label">Stratégie & Contenu · Paris · International</span>
           <h1 id="hero-title" class="hero__title">
             L'élégance stratégique<br>
             au service des marques<br>
@@ -807,62 +157,48 @@
             rencontre la <strong>performance mesurable</strong>.
           </p>
           <div class="hero__cta">
-            <a href="#contact" class="btn">Initier une conversation</a>
-            <a href="#projets" class="btn btn--ghost">Études de cas</a>
+            <a href="studio.html#contact" class="btn">Initier une conversation</a>
+            <a href="portfolio.html" class="btn btn--ghost">Voir le portfolio</a>
           </div>
         </div>
       </div>
-
-      <!-- Visible uniquement mobile (media query) -->
-      <div class="hero__scroll-hint" aria-hidden="true">
-        <i class="fas fa-chevron-down"></i>
-        <span>Scroll</span>
-      </div>
     </section>
 
-    <!-- ================================================
-         STATS
-    ================================================ -->
+    <!-- STATS -->
     <section class="section section--white" id="stats">
       <div class="container">
         <div class="stats__grid reveal">
           <article class="stats__item">
             <span class="stats__number" data-target="124" data-prefix="+" data-suffix="%">+0%</span>
             <span class="stats__name">Croissance Instagram</span>
-            <span class="stats__detail">Moyenne observée sur 6 mois d'accompagnement</span>
+            <span class="stats__detail">Moyenne sur 6 mois d'accompagnement</span>
           </article>
           <article class="stats__item">
             <span class="stats__number">×3.5</span>
             <span class="stats__name">Taux d'engagement</span>
-            <span class="stats__detail">Sur les campagnes lifestyle &amp; influence</span>
+            <span class="stats__detail">Sur les campagnes lifestyle & influence</span>
           </article>
           <article class="stats__item">
             <span class="stats__number" data-target="40" data-prefix="+" data-suffix="%">+0%</span>
             <span class="stats__name">Conversion Vente</span>
-            <span class="stats__detail">Optimisation du tunnel e-commerce premium</span>
+            <span class="stats__detail">Optimisation tunnel e-commerce premium</span>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ================================================
-         ABOUT
-    ================================================ -->
+    <!-- ABOUT SNIPPET -->
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
         <div class="about__grid">
           <div class="about__text reveal">
-            <h2 id="about-title">L'approche Studio</h2>
+            <span class="label" style="margin-bottom:14px">Le Studio</span>
+            <h2 id="about-title">Une approche<br><em>sans compromis.</em></h2>
             <p>Spécialisé dans l'univers du lifestyle et des marques créatives, notre studio fusionne la rigueur analytique et l'esthétique visuelle pour créer des écosystèmes où chaque interaction sert un objectif business concret.</p>
             <p>Nous ne créons pas du contenu. Nous architecturons des présences digitales qui durent.</p>
-            <div class="about__tags">
-              <span class="about__tag">Social Media Strategy</span>
-              <span class="about__tag">Branding Éditorial</span>
-              <span class="about__tag">Performance Analysis</span>
-              <span class="about__tag">Influence Marketing</span>
-              <span class="about__tag">Direction Artistique</span>
+            <div class="about__cta">
+              <a href="studio.html" class="btn btn--ghost">Découvrir le studio &nbsp;<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <a href="#projets" class="btn btn--ghost">Consulter nos archives</a>
           </div>
           <div class="about__visual reveal reveal--d2">
             <img
@@ -875,14 +211,12 @@
       </div>
     </section>
 
-    <!-- ================================================
-         SERVICES
-    ================================================ -->
-    <section class="section" id="services" aria-labelledby="services-title">
+    <!-- SERVICES -->
+    <section class="section section--white" id="services" aria-labelledby="services-title">
       <div class="container">
         <header class="section__header reveal">
           <span class="label">Ce que nous faisons</span>
-          <h2 id="services-title">Expertises Solutions</h2>
+          <h2 id="services-title">Expertises</h2>
         </header>
         <div class="services__grid">
           <article class="service-card reveal reveal--d1">
@@ -907,513 +241,197 @@
       </div>
     </section>
 
-    <!-- ================================================
-         PROCESS
-    ================================================ -->
-    <section class="section section--white" id="process" aria-labelledby="process-title">
+    <!-- PROJETS PHARES -->
+    <section class="section" id="projets" aria-labelledby="projets-title">
       <div class="container">
         <header class="section__header reveal">
-          <span class="label">Notre méthode</span>
-          <h2 id="process-title">Comment nous travaillons</h2>
+          <span class="label">Sélection</span>
+          <h2 id="projets-title">Projets phares</h2>
         </header>
-        <div class="process__grid">
-          <article class="process__step reveal reveal--d1">
-            <div class="process__num">01</div>
-            <h3>Diagnostic</h3>
-            <p>Audit complet de votre présence digitale, analyse concurrentielle et identification des axes de différenciation.</p>
+        <div class="projects__grid">
+          <article class="project-card reveal reveal--d1">
+            <img src="images/1.png" alt="Stratégie Instagram" loading="lazy" width="400" height="533">
+            <div class="project-card__bar" aria-hidden="true">
+              <span class="project-card__bar-label">Social Media</span>
+              <p class="project-card__bar-title">Stratégie Instagram</p>
+            </div>
+            <div class="project-card__overlay" aria-hidden="true">
+              <div><span class="project-card__label">Social Media</span><p class="project-card__title">Stratégie Instagram</p></div>
+            </div>
           </article>
-          <article class="process__step reveal reveal--d2">
-            <div class="process__num">02</div>
-            <h3>Stratégie</h3>
-            <p>Élaboration d'une roadmap sur-mesure avec KPIs définis, planning éditorial et direction artistique.</p>
+          <article class="project-card reveal reveal--d2">
+            <img src="images/2.png" alt="Direction Éditoriale" loading="lazy" width="400" height="533">
+            <div class="project-card__bar" aria-hidden="true">
+              <span class="project-card__bar-label">Branding</span>
+              <p class="project-card__bar-title">Direction Éditoriale</p>
+            </div>
+            <div class="project-card__overlay" aria-hidden="true">
+              <div><span class="project-card__label">Branding</span><p class="project-card__title">Direction Éditoriale</p></div>
+            </div>
           </article>
-          <article class="process__step reveal reveal--d3">
-            <div class="process__num">03</div>
-            <h3>Production</h3>
-            <p>Création de contenus premium alignés sur vos codes de marque et adaptés à chaque plateforme.</p>
+          <article class="project-card reveal reveal--d3">
+            <img src="images/3.png" alt="Campagne Premium" loading="lazy" width="400" height="533">
+            <div class="project-card__bar" aria-hidden="true">
+              <span class="project-card__bar-label">Influence</span>
+              <p class="project-card__bar-title">Campagne Premium</p>
+            </div>
+            <div class="project-card__overlay" aria-hidden="true">
+              <div><span class="project-card__label">Influence</span><p class="project-card__title">Campagne Premium</p></div>
+            </div>
           </article>
-          <article class="process__step reveal reveal--d4">
-            <div class="process__num">04</div>
-            <h3>Optimisation</h3>
-            <p>Suivi des performances en temps réel, analyse des données et ajustements continus pour maximiser le ROI.</p>
-          </article>
+        </div>
+        <div class="projects__cta reveal">
+          <a href="portfolio.html" class="btn">Voir tous les projets &nbsp;<i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </div>
     </section>
 
-    <!-- ================================================
-         PORTFOLIO
-    ================================================ -->
-    <section class="section" id="projets" aria-labelledby="portfolio-title">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="label">Nos réalisations</span>
-          <h2 id="portfolio-title">Portfolio</h2>
-        </header>
-        <div class="slider-wrapper reveal" id="slider" role="region" aria-label="Galerie de projets" tabindex="0">
-          <div class="slider-track">
-            <article class="slide"><img src="images/1.png" alt="Stratégie Instagram" loading="lazy" width="348" height="450"><div class="slide__overlay" aria-hidden="true"><div><span class="slide__label">Social Media</span><p class="slide__title">Stratégie Instagram</p></div></div></article>
-            <article class="slide"><img src="images/2.png" alt="Direction Éditoriale" loading="lazy" width="348" height="450"><div class="slide__overlay" aria-hidden="true"><div><span class="slide__label">Branding</span><p class="slide__title">Direction Éditoriale</p></div></div></article>
-            <article class="slide"><img src="images/3.png" alt="Campagne Premium" loading="lazy" width="348" height="450"><div class="slide__overlay" aria-hidden="true"><div><span class="slide__label">Influence</span><p class="slide__title">Campagne Premium</p></div></div></article>
-            <article class="slide"><img src="images/4.png" alt="Analyse ROI" loading="lazy" width="348" height="450"><div class="slide__overlay" aria-hidden="true"><div><span class="slide__label">Performance</span><p class="slide__title">Analyse &amp; ROI</p></div></div></article>
-            <article class="slide"><img src="images/5.png" alt="Shooting Lifestyle" loading="lazy" width="348" height="450"><div class="slide__overlay" aria-hidden="true"><div><span class="slide__label">Contenu</span><p class="slide__title">Shooting Lifestyle</p></div></div></article>
-            <article class="slide"><img src="images/6.png" alt="Lancement de marque" loading="lazy" width="348" height="450"><div class="slide__overlay" aria-hidden="true"><div><span class="slide__label">Stratégie</span><p class="slide__title">Lancement de marque</p></div></div></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================================================
-         CLIENTS
-    ================================================ -->
+    <!-- CLIENTS -->
     <section class="section section--white" id="clients" aria-label="Nos clients">
       <div class="container clients__inner reveal">
-        <span class="label">Ils nous ont fait confiance</span>
+        <span class="label">Ils nous font confiance</span>
       </div>
       <div class="clients__track-wrapper" aria-hidden="true">
         <div class="clients__track">
           <img src="images/rungis.png"  alt="Rungis"  class="clients__logo" loading="lazy">
           <img src="images/beem.png"    alt="Beem"    class="clients__logo" loading="lazy">
           <img src="images/ackling.png" alt="Ackling" class="clients__logo" loading="lazy">
-          <img src="images/rungis.png"  alt="Rungis"  class="clients__logo" loading="lazy">
-          <img src="images/beem.png"    alt="Beem"    class="clients__logo" loading="lazy">
-          <img src="images/ackling.png" alt="Ackling" class="clients__logo" loading="lazy">
-          <img src="images/rungis.png"  alt="" class="clients__logo" loading="lazy">
-          <img src="images/beem.png"    alt="" class="clients__logo" loading="lazy">
-          <img src="images/ackling.png" alt="" class="clients__logo" loading="lazy">
-          <img src="images/rungis.png"  alt="" class="clients__logo" loading="lazy">
-          <img src="images/beem.png"    alt="" class="clients__logo" loading="lazy">
-          <img src="images/ackling.png" alt="" class="clients__logo" loading="lazy">
+          <img src="images/rungis.png"  alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/beem.png"    alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/ackling.png" alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/rungis.png"  alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/beem.png"    alt="" class="clients__logo" loading="lazy" aria-hidden="true">
+          <img src="images/ackling.png" alt="" class="clients__logo" loading="lazy" aria-hidden="true">
         </div>
       </div>
     </section>
 
-    <!-- ================================================
-         TÉMOIGNAGES
-    ================================================ -->
+    <!-- TÉMOIGNAGES -->
     <section class="section section--accent" id="testimonials" aria-labelledby="testimonials-title">
       <div class="container">
         <header class="section__header reveal">
-          <span class="label" style="color:rgba(241,239,231,0.55)">Ce qu'ils disent</span>
+          <span class="label" style="color:rgba(241,239,231,0.5)">Ce qu'ils disent</span>
           <h2 id="testimonials-title" style="color:var(--bg)">Témoignages</h2>
         </header>
 
-        <article class="testimonial active">
-          <img src="images/xavier.jpg" alt="Xavier Letzelter" class="testimonial__photo" loading="lazy">
-          <p class="testimonial__quote">« Je ne peux que recommander Elona pour toute opportunité future dans le domaine du marketing digital. Elle apportera, sans aucun doute, une réelle valeur à toute structure qui lui fera confiance. »</p>
-          <small class="testimonial__author">Xavier Letzelter — General Manager</small>
-          <img src="images/rungis.png" alt="Rungis" class="testimonial__logo" loading="lazy">
-        </article>
+        <div class="testimonials__carousel reveal" id="testimonials-carousel" role="region" aria-label="Témoignages clients">
+          <div class="testimonials__track" id="testimonials-track">
 
-        <article class="testimonial">
-          <img src="images/aimee.jpg" alt="Aimee Bergeret" class="testimonial__photo" loading="lazy">
-          <p class="testimonial__quote">« Elona a contribué à l'essor de notre marque, notamment sur les réseaux sociaux et nous faisant connaître auprès des influenceurs. Organisée et avec une bonne compréhension des enjeux de l'entreprise, elle est toujours investie. »</p>
-          <small class="testimonial__author">Aimee Bergeret — Head of Brand Marketing</small>
-          <img src="images/beem.png" alt="Beem" class="testimonial__logo" loading="lazy">
-        </article>
+            <article class="testimonial-slide" aria-label="Témoignage 1 sur 3">
+              <img src="images/xavier.jpg" alt="Xavier Letzelter" class="testimonial__photo" loading="lazy" width="80" height="80">
+              <blockquote class="testimonial__quote">« Je ne peux que recommander Elona pour toute opportunité future dans le domaine du marketing digital. Elle apportera, sans aucun doute, une réelle valeur à toute structure qui lui fera confiance. »</blockquote>
+              <small class="testimonial__author">Xavier Letzelter</small>
+              <span class="testimonial__company">General Manager · Rungis</span>
+            </article>
 
-        <article class="testimonial">
-          <img src="images/lino.jpg" alt="Lino Fillaudeau" class="testimonial__photo" loading="lazy">
-          <p class="testimonial__quote">« Elle a exercé ses fonctions avec enthousiasme et professionnalisme et était particulièrement appréciée par ses collègues pour son anticipation et ses prises d'initiatives. »</p>
-          <small class="testimonial__author">Lino Fillaudeau — Country Manager France</small>
-          <img src="images/ackling.png" alt="Ackling" class="testimonial__logo" loading="lazy">
-        </article>
+            <article class="testimonial-slide" aria-label="Témoignage 2 sur 3">
+              <img src="images/aimee.jpg" alt="Aimee Bergeret" class="testimonial__photo" loading="lazy" width="80" height="80">
+              <blockquote class="testimonial__quote">« Elona a contribué à l'essor de notre marque, notamment sur les réseaux sociaux et en nous faisant connaître auprès des influenceurs. Organisée, avec une bonne compréhension des enjeux de l'entreprise, elle est toujours investie. »</blockquote>
+              <small class="testimonial__author">Aimee Bergeret</small>
+              <span class="testimonial__company">Head of Brand Marketing · Beem</span>
+            </article>
 
-        <nav class="testimonial__dots reveal" aria-label="Navigation témoignages">
-          <button class="testimonial__dot active" data-index="0" aria-label="Témoignage 1" aria-current="true"></button>
-          <button class="testimonial__dot"        data-index="1" aria-label="Témoignage 2"></button>
-          <button class="testimonial__dot"        data-index="2" aria-label="Témoignage 3"></button>
+            <article class="testimonial-slide" aria-label="Témoignage 3 sur 3">
+              <img src="images/lino.jpg" alt="Lino Fillaudeau" class="testimonial__photo" loading="lazy" width="80" height="80">
+              <blockquote class="testimonial__quote">« Elle a exercé ses fonctions avec enthousiasme et professionnalisme et était particulièrement appréciée par ses collègues pour son anticipation et ses prises d'initiatives. »</blockquote>
+              <small class="testimonial__author">Lino Fillaudeau</small>
+              <span class="testimonial__company">Country Manager France · Ackling</span>
+            </article>
+
+          </div>
+        </div>
+
+        <nav class="testimonials__nav reveal" aria-label="Navigation témoignages">
+          <button class="testimonials__arrow" id="testi-prev" aria-label="Témoignage précédent">
+            <i class="fas fa-arrow-left" aria-hidden="true"></i>
+          </button>
+          <div class="testimonials__dots">
+            <button class="testimonials__dot active" data-index="0" aria-label="Témoignage 1" aria-current="true"></button>
+            <button class="testimonials__dot"        data-index="1" aria-label="Témoignage 2"></button>
+            <button class="testimonials__dot"        data-index="2" aria-label="Témoignage 3"></button>
+          </div>
+          <button class="testimonials__arrow" id="testi-next" aria-label="Témoignage suivant">
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+          </button>
         </nav>
       </div>
     </section>
 
-    <!-- ================================================
-         TARIFS
-         Ajouter une catégorie : 
-           1. <button data-tab="nouveau"> dans .pricing__tabs
-           2. <div class="pricing__panel" data-panel="nouveau"> avec les cartes
-         → Le JS gère tout automatiquement.
-    ================================================ -->
-    <section class="section section--white" id="tarifs" aria-labelledby="tarifs-title">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="label">Investissement</span>
-          <h2 id="tarifs-title">Nos offres</h2>
-        </header>
-
-        <div class="pricing__tabs reveal" role="tablist" aria-label="Catégories de tarifs">
-          <button class="pricing__tab active" data-tab="social" role="tab" aria-selected="true">Social Media</button>
-          <button class="pricing__tab"        data-tab="brand"  role="tab" aria-selected="false">Branding</button>
-          <button class="pricing__tab"        data-tab="strat"  role="tab" aria-selected="false">Stratégie</button>
-        </div>
-
-        <!-- Panel Social Media -->
-        <div class="pricing__panel active" data-panel="social" role="tabpanel">
-          <div class="pricing-card">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Starter</p>
-            <p class="pricing-card__price"><sup>€</sup>490</p>
-            <p class="pricing-card__freq">/ mois</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Audit de compte</li>
-              <li>12 publications / mois</li>
-              <li>Copywriting inclus</li>
-              <li>Rapport mensuel</li>
-            </ul>
-            <a href="#contact" class="btn btn--ghost">Démarrer</a>
-          </div>
-          <div class="pricing-card pricing-card--featured">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Growth</p>
-            <p class="pricing-card__price"><sup>€</sup>890</p>
-            <p class="pricing-card__freq">/ mois</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Stratégie éditoriale</li>
-              <li>20 publications / mois</li>
-              <li>Stories + Reels</li>
-              <li>Gestion des DM</li>
-              <li>Rapport hebdomadaire</li>
-            </ul>
-            <a href="#contact" class="btn">Démarrer</a>
-          </div>
-          <div class="pricing-card">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Premium</p>
-            <p class="pricing-card__price"><sup>€</sup>1 490</p>
-            <p class="pricing-card__freq">/ mois</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Stratégie multi-plateforme</li>
-              <li>Publications illimitées</li>
-              <li>Direction artistique</li>
-              <li>Influence outreach</li>
-              <li>Dashboard live dédié</li>
-              <li>Call hebdo</li>
-            </ul>
-            <a href="#contact" class="btn btn--ghost">Démarrer</a>
-          </div>
-        </div>
-
-        <!-- Panel Branding -->
-        <div class="pricing__panel" data-panel="brand" role="tabpanel">
-          <div class="pricing-card">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Identité</p>
-            <p class="pricing-card__price"><sup>€</sup>990</p>
-            <p class="pricing-card__freq">projet unique</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Moodboard & univers</li>
-              <li>Charte graphique</li>
-              <li>Kit réseaux sociaux</li>
-            </ul>
-            <a href="#contact" class="btn btn--ghost">Démarrer</a>
-          </div>
-          <div class="pricing-card pricing-card--featured">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Éditorial</p>
-            <p class="pricing-card__price"><sup>€</sup>2 200</p>
-            <p class="pricing-card__freq">projet unique</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Identité complète</li>
-              <li>Direction artistique</li>
-              <li>Templates contenus</li>
-              <li>Brand book livré</li>
-            </ul>
-            <a href="#contact" class="btn">Démarrer</a>
-          </div>
-          <div class="pricing-card">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Sur-mesure</p>
-            <p class="pricing-card__price">Sur devis</p>
-            <p class="pricing-card__freq">&nbsp;</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Accompagnement complet</li>
-              <li>Shooting inclus</li>
-              <li>Refonte totale</li>
-              <li>Suivi 3 mois</li>
-            </ul>
-            <a href="#contact" class="btn btn--ghost">Nous contacter</a>
-          </div>
-        </div>
-
-        <!-- Panel Stratégie -->
-        <div class="pricing__panel" data-panel="strat" role="tabpanel">
-          <div class="pricing-card">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Audit Flash</p>
-            <p class="pricing-card__price"><sup>€</sup>390</p>
-            <p class="pricing-card__freq">prestation unique</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Analyse de présence</li>
-              <li>Rapport d'opportunités</li>
-              <li>Call de restitution 1h</li>
-            </ul>
-            <a href="#contact" class="btn btn--ghost">Démarrer</a>
-          </div>
-          <div class="pricing-card pricing-card--featured">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Strategy Book</p>
-            <p class="pricing-card__price"><sup>€</sup>1 200</p>
-            <p class="pricing-card__freq">prestation unique</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Audit complet</li>
-              <li>Roadmap 6 mois</li>
-              <li>KPIs & reporting</li>
-              <li>2 sessions de travail</li>
-            </ul>
-            <a href="#contact" class="btn">Démarrer</a>
-          </div>
-          <div class="pricing-card">
-            <span class="pricing-card__badge">Recommandé</span>
-            <p class="pricing-card__name">Retainer</p>
-            <p class="pricing-card__price"><sup>€</sup>700</p>
-            <p class="pricing-card__freq">/ mois</p>
-            <div class="pricing-card__hr"></div>
-            <ul class="pricing-card__features">
-              <li>Conseil mensuel continu</li>
-              <li>Suivi des KPIs</li>
-              <li>Ajustements stratégiques</li>
-              <li>Appel hebdo 30 min</li>
-            </ul>
-            <a href="#contact" class="btn btn--ghost">Démarrer</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ================================================
-         CONTACT
-    ================================================ -->
-    <section class="section" id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <header class="section__header reveal">
-          <span class="label">Travaillons ensemble</span>
-          <h2 id="contact-title">Contact</h2>
-        </header>
-        <p class="contact__intro reveal">Disponible pour de nouvelles collaborations sélectives.</p>
-
-        <form class="contact__form reveal" id="contact-form" novalidate aria-label="Formulaire de contact">
-          <div class="form-group">
-            <input type="text" id="f-name" name="name" placeholder=" " required autocomplete="name">
-            <label for="f-name">Nom complet</label>
-          </div>
-          <div class="form-group">
-            <input type="email" id="f-email" name="email" placeholder=" " required autocomplete="email">
-            <label for="f-email">Adresse email</label>
-          </div>
-          <div class="form-group has-textarea">
-            <textarea id="f-msg" name="message" placeholder=" " required></textarea>
-            <label for="f-msg">Votre message</label>
-          </div>
-          <button type="submit" class="btn btn--full">
-            Envoyer la demande
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </button>
-        </form>
-
-        <div class="form-success" id="form-success" role="alert" aria-live="polite">
-          <div class="form-success__icon"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
-          <h3>Message envoyé !</h3>
-          <p>Merci pour votre message. Nous reviendrons vers vous dans les 48h.</p>
+    <!-- CTA STRIP -->
+    <section class="cta-strip" aria-label="Appel à l'action">
+      <div class="container reveal">
+        <h2>Prêt à construire<br><em>quelque chose de remarquable ?</em></h2>
+        <p>Disponible pour de nouvelles collaborations sélectives.</p>
+        <div class="btn-group">
+          <a href="studio.html#contact" class="btn btn--white">Initier une conversation</a>
+          <a href="studio.html#tarifs"  class="btn btn--white-ghost">Voir les tarifs</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ================================================
-       FOOTER
-  ================================================ -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer__grid">
       <div class="footer__col">
         <h4>ELONA Studio</h4>
-        <p>Architecte d'image digitale.</p>
+        <p class="footer__tagline">Architecte d'image digitale.</p>
         <p>Paris · International</p>
         <a href="mailto:contact@elona.studio">contact@elona.studio</a>
-      </div>
-      <div class="footer__col">
-        <h4>Navigation</h4>
-        <a href="#about">Studio</a>
-        <a href="#services">Expertises</a>
-        <a href="#process">Process</a>
-        <a href="#projets">Portfolio</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="footer__col">
-        <h4>Réseaux</h4>
         <div class="footer__social">
-          <a href="https://www.instagram.com/adressessecretes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <i class="fab fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/elona-renaux/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <i class="fab fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.tiktok.com/@adressessecretes" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <i class="fab fa-tiktok" aria-hidden="true"></i>
-          </a>
+          <a href="https://www.instagram.com/adressessecretes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/elona-renaux/"   target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"  aria-hidden="true"></i></a>
+          <a href="https://www.tiktok.com/@adressessecretes"    target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok"   aria-hidden="true"></i></a>
         </div>
       </div>
+      <div class="footer__col">
+        <h4>Pages</h4>
+        <a href="index.html">Accueil</a>
+        <a href="studio.html">Studio</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="studio.html#tarifs">Tarifs</a>
+      </div>
+      <div class="footer__col">
+        <h4>Expertises</h4>
+        <a href="studio.html#services">Social Media Strategy</a>
+        <a href="studio.html#services">Branding Éditorial</a>
+        <a href="studio.html#services">Performance Data</a>
+        <a href="studio.html#services">Direction Artistique</a>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <a href="mailto:contact@elona.studio">contact@elona.studio</a>
+        <a href="https://www.linkedin.com/in/elona-renaux/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="studio.html#contact">Formulaire</a>
+      </div>
     </div>
-    <p class="footer__bottom">© <span id="footer-year"></span> ELONA Studio. Tous droits réservés.</p>
+    <p class="footer__bottom">© <span class="footer-year"></span> ELONA Studio. Tous droits réservés.</p>
   </footer>
 
-  <!-- ================================================
-       JAVASCRIPT
-  ================================================ -->
+  <script src="shared.js"></script>
   <script>
     'use strict';
-
-    const $  = (s, ctx = document) => ctx.querySelector(s);
-    const $$ = (s, ctx = document) => [...ctx.querySelectorAll(s)];
-
-    /* Année footer */
-    const yr = $('#footer-year');
-    if (yr) yr.textContent = new Date().getFullYear();
-
-    /* Navigation */
-    const nav    = $('.nav');
-    const burger = $('#nav-burger');
-    const navList = $('#nav-list');
-
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 55);
-    }, { passive: true });
-
-    burger.addEventListener('click', () => {
-      const open = navList.classList.toggle('open');
-      burger.setAttribute('aria-expanded', String(open));
-      burger.querySelector('i').className = open ? 'fas fa-times' : 'fas fa-bars';
-    });
-
-    $$('.nav__list a').forEach(a => a.addEventListener('click', () => {
-      navList.classList.remove('open');
-      burger.setAttribute('aria-expanded', 'false');
-      burger.querySelector('i').className = 'fas fa-bars';
-    }));
-
-    /* Reveal — IntersectionObserver */
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('active');
-        revealObs.unobserve(e.target);
-      });
-    }, { threshold: 0.12 });
-    $$('.reveal').forEach(el => revealObs.observe(el));
-
-    /* Compteurs animés */
+    /* Animated counters */
     function animateCounter(el) {
       const target = parseInt(el.dataset.target, 10);
-      const prefix = el.dataset.prefix || '';
-      const suffix = el.dataset.suffix || '';
-      const dur    = 1800;
-      const t0     = performance.now();
+      const prefix = el.dataset.prefix || '', suffix = el.dataset.suffix || '';
+      const dur = 1800, t0 = performance.now();
       (function tick(now) {
         const p = Math.min((now - t0) / dur, 1);
         el.textContent = prefix + Math.floor((1 - Math.pow(1 - p, 3)) * target) + suffix;
         if (p < 1) requestAnimationFrame(tick);
       })(t0);
     }
-
     const statsObs = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
-        $$('[data-target]', e.target).forEach(animateCounter);
-        statsObs.unobserve(e.target);
+        document.querySelectorAll('[data-target]').forEach(animateCounter);
+        statsObs.disconnect();
       });
     }, { threshold: 0.4 });
-    const statsEl = $('#stats');
+    const statsEl = document.getElementById('stats');
     if (statsEl) statsObs.observe(statsEl);
-
-    /* Témoignages */
-    const slides = $$('.testimonial');
-    const dots   = $$('.testimonial__dot');
-    let cur = 0, timer;
-
-    function goTo(i) {
-      slides[cur].classList.remove('active');
-      dots[cur].classList.remove('active');
-      dots[cur].removeAttribute('aria-current');
-      cur = (i + slides.length) % slides.length;
-      slides[cur].classList.add('active');
-      dots[cur].classList.add('active');
-      dots[cur].setAttribute('aria-current', 'true');
-    }
-
-    dots.forEach((d, i) => d.addEventListener('click', () => {
-      clearInterval(timer);
-      goTo(i);
-      timer = setInterval(() => goTo(cur + 1), 5500);
-    }));
-    timer = setInterval(() => goTo(cur + 1), 5500);
-
-    /* Slider drag-to-scroll */
-    const slider = $('#slider');
-    if (slider) {
-      let isDown = false, startX, scrollLeft;
-      slider.addEventListener('mousedown', e => { isDown = true; startX = e.pageX - slider.offsetLeft; scrollLeft = slider.scrollLeft; });
-      slider.addEventListener('mouseleave', () => isDown = false);
-      slider.addEventListener('mouseup',    () => isDown = false);
-      slider.addEventListener('mousemove', e => {
-        if (!isDown) return;
-        e.preventDefault();
-        slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 1.7;
-      });
-    }
-
-    /* Tarifs — onglets dynamiques
-       Aucune modif JS nécessaire pour ajouter une catégorie.
-       Il suffit d'ajouter data-tab="xxx" + data-panel="xxx" dans le HTML. */
-    $$('.pricing__tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        const key = tab.dataset.tab;
-        $$('.pricing__tab').forEach(t => {
-          t.classList.toggle('active', t === tab);
-          t.setAttribute('aria-selected', String(t === tab));
-        });
-        $$('.pricing__panel').forEach(p => {
-          p.classList.toggle('active', p.dataset.panel === key);
-        });
-      });
-    });
-
-    /* Formulaire contact */
-    const form    = $('#contact-form');
-    const success = $('#form-success');
-    if (form && success) {
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        let valid = true;
-        $$('[required]', form).forEach(f => {
-          if (!f.value.trim()) {
-            valid = false;
-            f.style.borderColor = '#c0392b';
-            f.addEventListener('input', () => f.style.borderColor = '', { once: true });
-          }
-        });
-        if (!valid) return;
-        const btn = form.querySelector('[type="submit"]');
-        btn.textContent = 'Envoi en cours…';
-        btn.disabled = true;
-        /* Remplacer par votre appel Formspree / API */
-        setTimeout(() => {
-          form.style.display = 'none';
-          success.classList.add('visible');
-          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }, 1200);
-      });
-    }
   </script>
-
 </body>
 </html>
