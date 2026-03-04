@@ -69,8 +69,8 @@ p{line-height:1.75}
 /* 7. NAVIGATION */
 .nav{position:fixed;inset:0 0 auto;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;background:rgba(241,239,231,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);z-index:2000;border-bottom:1px solid var(--border-light);transition:padding var(--transition),box-shadow var(--transition)}
 .nav.scrolled{padding-block:12px;box-shadow:var(--shadow-sm)}
-.nav__logo{font-family:var(--font-serif);font-size:20px;font-weight:700;letter-spacing:6px;text-decoration:none;text-transform:uppercase;color:var(--accent);transition:letter-spacing var(--transition),opacity var(--transition)}
-.nav__logo:hover{letter-spacing:8px;opacity:0.7}
+.nav__logo{font-family:var(--font-serif);font-size:20px;font-weight:700;letter-spacing:6px;text-decoration:none;text-transform:uppercase;color:var(--accent);transition:opacity var(--transition)}
+.nav__logo:hover{opacity:0.7}
 .nav__list{display:flex;align-items:center;gap:30px;list-style:none}
 .nav__list a{text-decoration:none;color:var(--text);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:2px;position:relative;transition:color 0.3s}
 .nav__list a:not(.btn)::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--accent);transition:width 0.4s var(--ease-out)}
@@ -78,6 +78,7 @@ p{line-height:1.75}
 .nav__list a:not(.btn):hover::after,.nav__list a.nav-active:not(.btn)::after{width:100%}
 .nav__list a.nav-active{color:var(--accent)}
 .nav__burger{display:none;background:none;border:none;cursor:pointer;color:var(--accent);font-size:18px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.nav__list .btn{color:var(--white);}
 
 /* 8. TESTIMONIALS CAROUSEL (shared) */
 .testimonials__carousel{position:relative;overflow:hidden;touch-action:pan-y;cursor:grab}
